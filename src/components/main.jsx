@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./navbar";
-import { default as portfolio_image } from "../images/me.jpeg";
-import { default as portfolio_image_2 } from "../images/portfolio-image-2.jpeg";
+import { default as portfolio_image } from "../images/portfolio_image.jpg";
+import { default as portfolio_image_2 } from "../images/portfolio_image_2.jpeg";
 import { default as js_icon } from "../images/js-icon.png";
 import { default as css_icon } from "../images/css-icon.png";
 import { default as html_icon } from "../images/html-icon.png";
@@ -16,13 +16,13 @@ import { default as tetris_gif } from "../images/tetris.gif";
 import { default as asteroids_gif } from "../images/asteroids.gif";
 import { default as moviedatabase_gif } from "../images/moviedatabase.gif";
 
-import { default as phone_icon } from "../images/phone.png";
-import { default as email_icon } from "../images/mail.png";
-import { default as facebook_icon } from "../images/facebook.png";
-import { default as instagram_icon } from "../images/instagram.png";
-import { default as linkedin_icon } from "../images/linkedin.png";
+import { default as phone_icon } from "../images/phone.svg";
+import { default as email_icon } from "../images/email.svg";
+import { default as facebook_icon } from "../images/facebook.svg";
+import { default as instagram_icon } from "../images/instagram-icon.png";
+import { default as linkedin_icon } from "../images/linkedin.svg";
 
-import { default as scroll_up_icon } from "../images/scroll-up-icon.png";
+import { default as scroll_up_icon } from "../images/scroll-up.png";
 
 export default function Main() {
   return (
@@ -31,14 +31,16 @@ export default function Main() {
       <div className="header">
         <img src={portfolio_image} alt="" />
         <div className="content">
-          <span>DANIEL DOBROVOLS</span>
+          <div>
+            <span>DANIEL DOBROVOLS</span>
+          </div>
           <span>KIY</span>
           <div className="content-inner">
-            <h4>Frontend Developer</h4>
-            <h4>React & React Native & Python</h4>
+            <h4>Developer</h4>
+            <h4>Javascript & React</h4>
             <div className="links">
-              <a href="resume.pdf" download>Download Resume</a>
-              <a href="/#contact">Contact Me</a>
+              <a href="http://danban451.github.io/portfolio/resume.pdf" download>Download Resume</a>
+              <a href="http://danban451.github.io/portfolio/#contact">Contact Me</a>
             </div>
           </div>
         </div>
@@ -140,33 +142,7 @@ export default function Main() {
           <div>
             <h1>About Me </h1>
             <p>
-              Education is what I am aiming for in life. A career is not just
-              something I want as for a job, it’s a part of my life, it’s not
-              even a piece of my life, education is my whole life. I cannot see
-              my life, without education! I cannot see my life without pursuing
-              wisdom. Without uncovering the secrets to the universe, the
-              secrets to being. I cannot see myself in the future without
-              continuously uncovering, peaking into, the clock-work of reality.
-              I’m hungry for wisdom! I want wisdom above all else! And I am one
-              hell of a competitive person, and I cannot see myself in the
-              future without climbing the hierarchy’s of this world. To me, I
-              would much rather become somebody of value, somebody who knows
-              things, rather than somebody who is just doing construction. I’m
-              not pursuing college, a career, for the sake of money! Sure, I
-              believe that will come as a result. But, it is only an outcome of
-              the journey of becoming great! It is only the outcome of the
-              journey to becoming a man of value! I am not a small picture
-              thinker, far from it! I want to aim at the stars (knowing well
-              that obtaining wisdom is conservative), I want to become the best
-              in my field, aiming at becoming a world-class Software Engineer.
-              Although, the reason is because I want to learn. Heres my
-              philosophy in life, becoming a master in one field, automatically
-              transfers knowledge to another field. I see the world of career as
-              a tall tower. The towers signify people of value, and a pursuing a
-              career is the journey to building your tower. The way to reach the
-              highest point, is to focus on one tower! And by focusing on one,
-              and becoming the master at that one, you will be in the clouds of
-              understanding.
+            Being very passionate about my work, I value education and knowledge above all else. The training of the mind to think, as Einstein best said, is the lifelong journey that I have embarked upon. In all aspects of my life, I find ways to make things meaningful and fun. The worst thing I could possibly imagine is to live life being passive and inactive — letting that clock tick as your numbers on this planet slowly run out. I am a person who wants to know the truth and uncover the secrets of the universe; a person who wants to peek into the clock-work of reality and walk in goodness and discipline. The very core of my beliefs lie in pursuing excellence above all else — in fighting weakness and building character. I truly believe that every single person has potential to become great if only they put in the work and time. I am not a believer in being a jack-of-all-trades — a person who is good at many things. I hold that mastery (becoming the 1% in what you do) is far more rewarding and meaningful. 
             </p>
           </div>
         </div>
@@ -200,7 +176,7 @@ export default function Main() {
         </ul>
       </div>
       <div className="footer">
-        <a href="/#home">
+        <a href="http://danban451.github.io/portfolio/#home">
           <img src={scroll_up_icon} alt="" />
         </a>
         <span>Copyright @ 2022. All Rights Reserved.</span>

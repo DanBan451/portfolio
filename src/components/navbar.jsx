@@ -1,9 +1,9 @@
 import "../styles/navbar.css";
 import React, { useEffect, useState } from "react";
 import { default as logo } from "../images/OptimalPandaWordPress_PandaWordLogo.svg";
-import { default as facebook_icon } from "../images/facebook.png";
-import { default as instagram_icon } from "../images/instagram.png";
-import { default as linkedin_icon } from "../images/linkedin.png";
+import { default as facebook_icon } from "../images/facebook.svg";
+import { default as instagram_icon } from "../images/instagram-icon.png";
+import { default as linkedin_icon } from "../images/linkedin.svg";
 import {default as menuIcon} from '../images/menu.png';
 import useWindowDimensions from "./useWindowDimensions";
 
@@ -17,19 +17,19 @@ function NavBar ({ quoteHandler }) {
     <div id='home' className={"navbar-wrapper"}>
       <div></div>
       <ul className={'links-list'}>
-        <li><a href="/#home">Home</a></li>
-        <li><a href="/#projects">Projects</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="resume.pdf">Resume</a></li>
+        <li><a href="http://danban451.github.io/portfolio/#home">Home</a></li>
+        <li><a href="http://danban451.github.io/portfolio/#projects">Projects</a></li>
+        <li><a href="http://danban451.github.io/portfolio/#about">About</a></li>
+        <li><a href="http://danban451.github.io/portfolio/#contact">Contact</a></li>
+        <li><a href="http://danban451.github.io/portfolio/resume.pdf">Resume</a></li>
       </ul>
       <div className='socials-list'>
         <ul className={'socials-list-inner'}> 
-          <a href="https://www.facebook.com/profile.php?id=100072146749775">
-            <img src={facebook_icon} alt="" />   
-          </a>
           <a href="https://www.instagram.com/sapphirebuyer451/">
             <img src={instagram_icon} alt="" />   
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100072146749775">
+            <img src={facebook_icon} alt="" />   
           </a>
           <a href="https://www.instagram.com/optimalexterior/?hl=en">
             <img src={linkedin_icon} alt="" />   

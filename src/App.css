@@ -14,7 +14,7 @@ img {
   width: 100vw;
   height: 30vw;
   display: flex;
-  margin-bottom: 5vw;;
+  margin-bottom: 5vw;
 }
 .header > img {
   display: flex;
@@ -31,17 +31,23 @@ img {
   grid-template-columns: 70% 30%; 
   grid-template-rows: 50% 50%;  
 }
-.header .content > span:first-of-type {  
-  font-size: 5vw;
-  text-align: right;
-  font-weight: 225; 
-  margin-top: auto; 
+/* span within border */
+.header .content > div:first-of-type {
+  display: flex;
+  width: 100%;
 }
-.header .content > span:last-of-type {
+.header .content > div > span {  
+  font-size: 5vw;  
+  font-weight: 225; 
+  margin-top: auto;   
+  margin-left: auto;
+}
+/* span outside border */
+.header .content > span {
   font-weight: 225;    
   font-size: 5vw;   
-  color: aqua;
-  margin-top: auto;
+  color: blue;
+  margin-top: auto;  
 }
 .content .content-inner {
   width: 30%;
@@ -63,25 +69,25 @@ img {
   text-decoration: none;       
 }
 .content-inner .links a:first-of-type {
-  background-color: aqua;
-  border: 0.5px solid black;
-  color: black;  
+  background-color: black;
+  border: 0.1vw solid black;
+  color: white;  
   transition: 0.3s;
 }
 .content-inner .links a:first-of-type:hover {
   background-color: white;  
+  color: black;  
 }
 
 .content-inner .links a:last-of-type {
   background-color: white;
-  border-color: aqua;
-  border: 1px solid aqua; 
+  border: 1px solid black; 
   color: black; 
   transition: 0.3s;
 } 
-.content-inner .links a:last-of-type:hover {
-  background-color: aqua;
-  border: 0.5px solid black;
+.content-inner .links a:last-of-type:hover {  
+  background-color: black;
+  color: white;
 }
 
 /* -------- grid --------  */
@@ -320,7 +326,7 @@ img {
   margin-right: 5vw;
 }
 .footer a {
-  width: 2.5vw;
+  width: 50px;
   height: auto;
 }
 .footer span {
@@ -334,35 +340,40 @@ img {
     font-size: 2.5vw;
   }
   .header .content {
-    height: 40vw;
+    height: 25vw;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 2fr;
   } 
   .header > img {
     width: 50%;
     object-position: 50% 30%;
-  }
-  .header .content > span:first-of-type {    
+  }  
+  .header .content > div > span:first-of-type {    
     display: flex;      
     font-size: 5vw;        
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
+    width: 89%;
+  }  
+  .header .content > span {
+    font-weight: 500;            
   }
   .header .content > span:last-of-type {
     font-size: 5vw;
-    margin-top: auto;
-    margin-bottom: auto;
-  }  
+    margin-top: auto;    
+    margin-bottom: auto;    
+  }    
   .content .content-inner {
-    height: 100%;
-    width: 90%;
-    margin-left: 0;    
-    margin: auto;
+    width: 89%;    
+    margin-left: auto;       
+  }
+  .content-inner .links {
+    width: 80%;
   }
 
   .content-inner * {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 
   .grid {
@@ -410,7 +421,7 @@ img {
     content: "";
     width: 30%;
     height: 100%;               
-    background-image: url('./images/portfolio-image-2.jpeg');    
+    background-image: url('./images/portfolio_image_2.jpeg');    
     background-position: center;
     background-size: cover;
     display: block;
@@ -456,6 +467,26 @@ img {
   .contact .socials {
     width: 15%;
   }  
+}
+
+@media only screen and (max-width: 700px) {
+  .header .content > div > span:first-of-type {    
+    display: flex;      
+    font-size: 5vw;        
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 90%;
+  }  
+  .header .content > span:last-of-type {
+    font-size: 5vw;
+    margin-top: auto;    
+    margin-bottom: auto;    
+  }    
+  .content .content-inner {
+    width: 90%;    
+    margin-left: auto;       
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -530,6 +561,14 @@ img {
 }
 
 @media only screen and (max-width: 500px) {
+  .content-inner h4:first-of-type {    
+    margin-top: 1vw;
+    margin-bottom: 0vw;    
+  }
+  .content-inner h4:last-of-type {
+    margin-top: 0;
+    margin-bottom: 12vw;    
+  }
   .projects .project h3 {    
     font-size: 4vw;
   }
@@ -546,18 +585,20 @@ img {
     left: 0;
     margin: auto;
   }
-  .header .content > span:first-of-type {
+  .header .content > div > span:first-of-type {
     font-size: 7vw;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: 400;    
+    width: 83%;
   }
   .header .content > span:last-of-type {
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0;
-    font-size: 7vw;
-    color: rgb(0, 255, 255);
+    font-size: 7vw;    
   }
-
+  .content .content-inner {
+    width: 83%;
+  }
 
   .content-inner .links a:first-of-type {
     padding: 2vw 1vw;
@@ -635,7 +676,7 @@ img {
     width: 30%;
   }
   .contact .contact-methods span {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
   .contact .contact-methods img, .socials img {
     width: 6vw;
@@ -653,8 +694,10 @@ img {
 }
 
 @media only screen and (max-width: 300px) {
-
   .header {
     margin-bottom: 20vw; 
+  }
+  .content-inner .links a {
+    font-size: 2.5vw;
   }
 }

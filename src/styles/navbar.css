@@ -41,6 +41,9 @@
   justify-content: center;  
   margin: auto;    
 }
+.navbar-wrapper .links-list li {
+  display: flex;
+}
 .navbar-wrapper .links-list li a {
   text-decoration: none;
   color: black;  
@@ -50,7 +53,7 @@
   padding: 0 1vw;
 }
 .navbar-wrapper .links-list li a:hover {
-  color: aqua;  
+  color: grey;  
 }
 
 .navbar-wrapper .socials-list {   
