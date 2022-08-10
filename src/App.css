@@ -1,38 +1,660 @@
-.App {
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/* -------- HEADER --------  */
+
+.header {
+  width: 100vw;
+  height: 30vw;
+  display: flex;
+  margin-bottom: 5vw;;
+}
+.header > img {
+  display: flex;
+  width: 30%;  
+  object-fit: cover;
+  object-position: center;
+  margin-left: auto;
+}
+.header .content {  
+  width: 100%;
+  height: 30vw;
+  position: absolute;    
+  display: grid;
+  grid-template-columns: 70% 30%; 
+  grid-template-rows: 50% 50%;  
+}
+.header .content > span:first-of-type {  
+  font-size: 5vw;
+  text-align: right;
+  font-weight: 225; 
+  margin-top: auto; 
+}
+.header .content > span:last-of-type {
+  font-weight: 225;    
+  font-size: 5vw;   
+  color: aqua;
+  margin-top: auto;
+}
+.content .content-inner {
+  width: 30%;
+  margin-left: 50%;
+  height: 50%;
+}
+.content-inner * {
+  font-weight: 300;
+  font-size: 1vw; 
+}
+.content-inner .links {
+  display: flex;
+  justify-content: space-between;  
+}
+.content-inner .links a {
   text-align: center;
+  flex-basis: 45%;
+  padding: 0.5vw 0;    
+  text-decoration: none;       
+}
+.content-inner .links a:first-of-type {
+  background-color: aqua;
+  border: 0.5px solid black;
+  color: black;  
+  transition: 0.3s;
+}
+.content-inner .links a:first-of-type:hover {
+  background-color: white;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-inner .links a:last-of-type {
+  background-color: white;
+  border-color: aqua;
+  border: 1px solid aqua; 
+  color: black; 
+  transition: 0.3s;
+} 
+.content-inner .links a:last-of-type:hover {
+  background-color: aqua;
+  border: 0.5px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* -------- grid --------  */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid {
+  width: 97vw;
+  height: auto;    
+  margin-left: 3vw;
+  margin-bottom: 5vw;
+}
+.grid-inner {
+  width: 50%;
+  height: 100%;
+  /* background-color: peru; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2vw;
+}
+.grid-inner .title {
+  font-size: 1.5vw;
+  grid-column: 1/4;    
+  width: 33%;
+  display: flex;   
+}
+.grid-inner .title span {
+  border-bottom: 0.1vw solid black;  
+  display: inline-block;  
+  width: 100%;  
+  margin-top: auto;  
+  padding-bottom: 0.5vw;
+}
+.grid-inner .skill {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.grid-inner .skill img {
+  width: 25%;
+  height: auto;  
+}
+.grid-inner .skill span:first-of-type {
+  margin-top: 1vw;  
+  margin-bottom: 0.3vw;  
+  font-size: 1vw;
+}
+.grid-inner .skill span:last-of-type {
+  font-size: 0.6vw;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-inner .title.programs-title {
+  grid-row: 4/7;  
+}
+.grid-inner .program{
+  display: flex;  
+  flex-direction: row;  
+}
+.grid-inner .program img {
+  width: 25%;
+  height: auto;  
+}
+.grid-inner .program span {    
+  display: inline-block;
+  font-size: 1vw;
+  margin: auto;
+  margin-left: 5%;  
+}
+.grid-inner .title.projects-title {
+  grid-row: 8 / 11;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* -------- Projects --------  */
+
+.projects {
+  width: 100vw;
+}
+.projects .title {  
+  margin-top: 1vw;  
+  margin-bottom: 0.3vw;  
+  font-size: 1.5vw;  
+  width: 50%;
+  margin-left: 3%;  
+  padding-top: 1vw;
+}
+.projects .title span {
+  border-bottom: 0.1vw solid black;  
+  display: inline-block;    
+  margin-top: auto;  
+  padding-bottom: 0.5vw;  
+  width: 33%;  
+}
+
+.projects .projects-inner {
+  width: 50%;
+  margin: auto;
+  margin-right: auto;  
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  gap: 3vw;    
+  margin-top: 5vw;
+  /* margin: 5vw auto;   */
+}
+.projects .project {  
+  margin: auto;  
+}
+.projects .project h3 {
+  font-weight: 300;
+  font-size: 1.5vw;
+}
+.projects .project img {
+  width: 100%;
+  height: 100%;
+}
+#projects > div.projects-inner > div.project.private {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.projects .project div {
+  width: 100%;
+  height: 100%; 
+}
+
+
+/* -------- About --------  */
+
+.about {
+  width: 100vw;  
+  margin-left: auto; 
+  margin-bottom: 5vw;  
+}
+.about .title {  
+  margin-top: 1vw;  
+  margin-bottom: 0.3vw;  
+  font-size: 1.5vw;  
+  width: 50%;
+  margin-left: 3%;
+  padding-top: 1vw;
+}
+.about .title span {
+  border-bottom: 0.1vw solid black;  
+  display: inline-block;    
+  margin-top: auto;  
+  padding-bottom: 0.5vw;  
+  width: 33%;  
+}
+.about-inner {
+  display: flex; 
+  width: 97vw;
+  margin-left: 3vw;   
+  height: 30vw; 
+  margin-left: auto;
+  margin-top: 5vw;           
+}
+.about-inner > * {   
+  /* border: 1px solid red;  */
+}
+.about-inner img {  
+  object-fit: cover;
+  object-position: center;     
+  width: 30%;
+}
+.about-inner p {
+  font-size: 1vw;
+}
+.about-inner > div { 
+  width: 45%;      
+}
+.about-inner > div * {
+  padding-left: 3vw;
+}
+.about-inner h1 {
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+/* -------- Contact --------  */
+
+.contact {
+  height: auto;
+  width: 100vw; 
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  margin-bottom: 3vw;
+}
+.contact > * {
+  padding-left: 3%;
+}
+.contact .title {  
+  margin-top: 1vw;  
+  margin-bottom: 0.3vw;    
+  font-size: 1.5vw;   
+  width: 50%; 
+}
+.contact .title span {
+  border-bottom: 0.1vw solid black;  
+  display: inline-block;    
+  margin-top: auto;  
+  padding-bottom: 0.5vw;  
+  width: 33%;  
+}
+.contact > span {
+  font-size: 1vw;
+}
+.contact-methods {  
+  display: flex;  
+  width: 20%;
+}
+.contact .contact-methods img, .socials img {
+  width: 1.5vw;
+  height: auto;  
+  margin: auto 0;
+}
+.contact .contact-methods span, .socials span {
+  margin: auto 0;
+  font-size: 1vw;
+}
+.contact .contact-methods span {
+  margin-left: 1vw;
+}
+.contact .socials {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;  
+  margin: 0;
+  /* padding-left: 0; */
+}
+
+.footer {
+  width: 100vw;    
+  display: flex;
+  flex-direction: column;
+}
+.footer a {  
+  margin-left: auto;
+  margin-right: 5vw;
+}
+.footer a {
+  width: 2.5vw;
+  height: auto;
+}
+.footer span {
+  text-align: center;
+  padding: 1vw 0;
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .projects .project h3 {    
+    font-size: 2.5vw;
   }
-  to {
-    transform: rotate(360deg);
+  .header .content {
+    height: 40vw;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 2fr;
+  } 
+  .header > img {
+    width: 50%;
+    object-position: 50% 30%;
+  }
+  .header .content > span:first-of-type {    
+    display: flex;      
+    font-size: 5vw;        
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+  .header .content > span:last-of-type {
+    font-size: 5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+  }  
+  .content .content-inner {
+    height: 100%;
+    width: 90%;
+    margin-left: 0;    
+    margin: auto;
+  }
+
+  .content-inner * {
+    font-size: 2vw;
+  }
+
+  .grid {
+    margin-bottom: 8vw;
+  }
+  .grid-inner {
+    width: 75%;
+  }  
+  .grid-inner .title span {
+    font-size: 2.5vw;
+  }
+  .grid-inner .skill span:first-of-type {
+    font-size: 1.5vw;
+  }
+  .grid-inner .skill span:last-of-type {
+    font-size: 1vw;
+  }  
+  .grid-inner .title.programs-title {
+    grid-row: 4/10;
+  }
+  .grid-inner .program span {
+    font-size: 1.5vw;
+  }
+  
+  .projects .title {
+    width: 75%;
+  }
+  .projects .title span {
+    font-size: 2.5vw;
+  }  
+  .projects .projects-inner {
+    margin-bottom: 8vw;
+  }
+
+  .about {
+    margin-bottom: 15vw; 
+  }
+  .about-inner img {
+    display: none;
+  }
+  .about-inner > div {
+    width: 95%;
+  }
+  .about-inner > div::before {
+    content: "";
+    width: 30%;
+    height: 100%;               
+    background-image: url('./images/portfolio-image-2.jpeg');    
+    background-position: center;
+    background-size: cover;
+    display: block;
+    float: left;
+    margin-right: 3vw;    
+    margin-bottom: 2vw;    
+  }
+  .about-inner > div * {
+    font-size: 1.5vw;
+    margin: 0;
+    padding-left: 0;
+  }
+  .about .title {
+    width: 75%;
+  }
+  .about .title span {
+    font-size: 2vw;
+  }
+  .about-inner h1 {
+    font-size: 2vw;
+    margin-bottom: 1vw;    
+  }
+
+  .contact .title {
+    width: 75%;
+  }
+  .contact .title span {
+    font-size: 2vw;
+    width: 33%;
+  }
+  .contact {
+    gap: 2vw;
+  }
+  .contact > span {
+    font-size: 1.5vw;
+  }
+  .contact .contact-methods span {
+    font-size: 1.5vw;
+  }
+  .contact .contact-methods img, .socials img {
+    width: 3vw;
+  }
+  .contact .socials {
+    width: 15%;
+  }  
+}
+
+@media only screen and (max-width: 650px) {
+  .projects .project h3 {    
+    font-size: 3vw;
+  }
+  .grid-inner {
+    width: 90%;
+  }
+  .grid-inner .title span {
+    font-size: 3vw;
+  }
+  .grid-inner .skill span:first-of-type {
+    font-size: 2vw;
+    margin: 1.5vw 0;
+  }
+  .grid-inner .skill span:last-of-type {
+    font-size: 1.5vw;
+  }
+  .grid-inner .program span {
+    font-size: 2vw;
+  }
+
+  .projects .projects-inner {
+    width: 80%;
+  }
+  .projects .title span {
+    font-size: 3vw;
+  }
+
+  .about {
+    margin-bottom: 35vw;
+  }  
+  .about .title span {
+    font-size: 3vw;
+  }
+  .about-inner > div * {
+    font-size: 2vw;
+  }
+  .about-inner h1 {
+    font-size: 3vw;
+  }
+
+  .contact .title span {
+    font-size: 3vw;
+  }
+  .contact > span {
+    font-size: 2vw;
+  }
+  .contact {
+    gap: 3vw;
+  }
+  .contact-methods {
+    width: 30%;
+  }
+  .contact .contact-methods span {
+    font-size: 2vw;
+  }
+  .contact .contact-methods img, .socials img {
+    width: 5vw;
+  }
+  .contact .socials {
+    width: 20%;
+  }
+  .footer span {
+    font-size: 2vw;
+    padding: 3vw 0;
+  }
+  .footer a {
+    width: 5vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .project h3 {    
+    font-size: 4vw;
+  }
+  .header {
+    margin-bottom: 15vw; 
+  }
+  .content-inner * {
+    font-size: 3vw; 
+  }
+  .content-inner .links {
+    position: absolute;
+    width: 60%;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  .header .content > span:first-of-type {
+    font-size: 7vw;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .header .content > span:last-of-type {
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 7vw;
+    color: rgb(0, 255, 255);
+  }
+
+
+  .content-inner .links a:first-of-type {
+    padding: 2vw 1vw;
+    text-align: center;  
+  }
+  .content-inner .links a:last-of-type {
+    padding: 2vw 0;
+    text-align: center;  
+  }
+
+  .grid {
+    width: 94vw;
+  }
+  .grid-inner {
+    width: 100%;
+    gap: 3vw;
+    grid-template-rows: 0.5fr 1fr 1fr;
+  }
+  .grid-inner .skill img {
+    width: 50%;
+  }
+  .grid-inner .title span {
+    font-size: 5vw;
+  }
+  .grid-inner .skill span:first-of-type {
+    font-size: 3vw;
+    margin: 1.5vw 0;
+  }
+  .grid-inner .skill span:last-of-type {
+    font-size: 2vw;
+  }
+
+  .grid-inner .program img {
+    width: 30%;
+  }
+  .grid-inner .program span {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .projects .projects-inner {
+    width: 95%;
+  }
+  .projects .title span {
+    font-size: 5vw;
+  }
+
+  .about {
+    margin-bottom: 110vw;
+  }  
+  .about .title span {
+    font-size: 5vw;
+  }
+  .about-inner > div * {
+    font-size: 3vw;
+  }
+  .about-inner h1 {
+    font-size: 4vw;
+  }
+  .about-inner > div::before {
+    width: 50%;
+    height: 50vw;            
+  }
+
+  .contact .title span {
+    font-size: 5vw;
+    width: 50%;
+  }
+  .contact > span {
+    font-size: 3vw;    
+  }
+  .contact {
+    gap: 4vw;
+  }
+  .contact-methods {
+    width: 30%;
+  }
+  .contact .contact-methods span {
+    font-size: 3vw;
+  }
+  .contact .contact-methods img, .socials img {
+    width: 6vw;
+  }
+  .contact .socials {
+    width: 25%;
+  }
+  .footer span {
+    font-size: 3vw;
+    padding: 5vw 0;
+  }
+  .footer a {
+    width: 8vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+
+  .header {
+    margin-bottom: 20vw; 
   }
 }
