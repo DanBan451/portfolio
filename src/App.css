@@ -394,8 +394,8 @@ img {
   border: 0;
   padding: 0; 
   right: 0;
-  /* margin: 1vw 1.5vw; */
-  margin: 20px;  
+  /* margin: 1vw 1.5vw; */    
+  padding: 20px;  
   cursor: pointer;
 }
 /* background blur effect  */
@@ -1002,6 +1002,12 @@ img {
     text-align: center;           
     margin-top: 4vw;
     margin-bottom: 2vw;
+  }
+  .project-view-inner .exit-btn {
+    background-color: aliceblue;
+    padding-left: 2vw; 
+    padding-top: 2vw; 
+    padding-right: 2vw;
   }
 }
 
