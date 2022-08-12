@@ -1003,8 +1003,7 @@ img {
     margin-top: 4vw;
     margin-bottom: 2vw;
   }
-  .project-view-inner .exit-btn {
-    background-color: aliceblue;
+  .project-view-inner .exit-btn {    
     padding-left: 2vw; 
     padding-top: 2vw; 
     padding-right: 2vw;
