@@ -10,6 +10,9 @@ img {
 
 /* -------- HEADER --------  */
 
+.header .content > div > span:first-of-type {
+  color: black;
+}
 .header {
   width: 100vw;
   height: 30vw;
@@ -21,7 +24,7 @@ img {
   width: 30%;  
   object-fit: cover;
   object-position: center;
-  margin-left: auto;
+  margin-left: auto;   
 }
 .header .content {  
   width: 100%;
@@ -45,8 +48,8 @@ img {
 /* span outside border */
 .header .content > span {
   font-weight: 225;    
-  font-size: 5vw;   
-  color: blue;
+  font-size: 5vw;     
+  color: linear-gradient(135deg, rgb(102, 0, 255), rgba(255, 255, 255, 0));
   margin-top: auto;  
 }
 .content .content-inner {
@@ -189,17 +192,43 @@ img {
   margin-top: 5vw;
   /* margin: 5vw auto;   */
 }
-.projects .project {  
-  margin: auto;  
+.projects .project {   
+  position: relative;
 }
+
 .projects .project h3 {
   font-weight: 300;
   font-size: 1.5vw;
 }
 .projects .project img {
   width: 100%;
-  height: 100%;
+  height: 100%;  
+  transition: 0.3s;  
+  -webkit-filter: grayscale(100%);
 }
+.project .project-content {
+  position: absolute;
+  top: 0;
+  left: 0;  
+  text-align: center;
+  background: linear-gradient(135deg, rgb(102, 0, 255), rgba(255, 255, 255, 0));
+  color: white;  
+  display: flex;
+  opacity: 0;
+  transition: 0.5s;
+  height: 100%;  
+  width: 100%;    
+  text-decoration: none;
+}
+.project .project-content h2 {
+  margin: auto;
+  font-size: 1.5vw;
+}
+.project .project-content:hover {
+  opacity: 1;
+}
+
+
 #projects > div.projects-inner > div.project.private {
   display: flex;
   flex-direction: column;
@@ -335,6 +364,143 @@ img {
   font-size: 1vw;
 }
 
+/* -------- Project View --------  */
+.project-view {
+  background-color: rgba(0, 0, 0, 0.636);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;  
+}
+.project-view-visible {
+  display: flex;
+}
+.project-view-hidden {
+  display: none;
+}
+.project-view-inner {  
+  width: 100vh;    
+  margin: auto;
+  display: flex;
+  position: relative;  
+}
+.project-view-inner .exit-btn {
+  color: white;
+  text-decoration: none;
+  position: absolute;  
+  /* font-size: 1.2vw; */
+  background-color: transparent;
+  border: 0;
+  padding: 0; 
+  right: 0;
+  /* margin: 1vw 1.5vw; */
+  margin: 20px;  
+  cursor: pointer;
+}
+/* background blur effect  */
+.project-view-inner:before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  background: linear-gradient(135deg, rgb(102, 0, 255), rgba(255, 255, 255, 0));  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: -10;
+}
+.content {
+  flex-basis: 90%;  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.content * {
+  color: white;
+}
+.content a {
+  text-decoration: none;
+  padding: 1vw;
+  width: auto;
+  color: black;
+  border-radius: 0.2vw;
+  font-weight: 500;
+  background-color: white;
+  transition: 0.3s;  
+}
+.content a:hover {
+  background-color: transparent;  
+  color: white;
+}
+.content p {  
+  padding-bottom: 1.5vw;
+}
+
+.content .company {
+  flex-basis: 50%;
+  border-bottom: 1px solid white;
+}
+.content .company h1 {  
+  margin-top: 1vw;
+}
+.content .company p {
+  /* font-size: 0.8vw; */
+  margin-top: 1vw;
+}
+
+.development {
+  /* background-color: tomato; */
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;  
+  margin-bottom: 1.5vw;
+  gap: 0.5vw;
+}
+.development ul {
+  height: 25%;
+  padding-left: 0;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.development ul div {
+  display: flex;  
+  margin: 0.5vw 0;  
+}
+.development ul div img {
+  width: 1.5vw;
+  height: 1.5vw;  
+  margin-right: 1vw;  
+}
+.development ul div * {
+  margin: auto 0;
+}
+
+.development > div {
+  height: 75%; 
+  display: flex;  
+  margin-top: auto;    
+  margin-bottom: auto;    
+}
+.development > div img {  
+  width: 50%;    
+  height: auto;  
+}
+.development > div a {
+  margin-left: auto;
+  margin-top: auto;    
+  /* font-size: 0.8vw; */
+}
+
+@media only screen and (max-width: 1055px) {
+  .project-view-inner {
+    width: 95vw;    
+  }
+}
 @media only screen and (max-width: 900px) {
   .projects .project h3 {    
     font-size: 2.5vw;
@@ -354,7 +520,7 @@ img {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
-    width: 89%;
+    width: 89%;    
   }  
   .header .content > span {
     font-weight: 500;            
@@ -409,7 +575,7 @@ img {
   }
 
   .about {
-    margin-bottom: 15vw; 
+    margin-bottom: 10vw; 
   }
   .about-inner img {
     display: none;
@@ -487,6 +653,92 @@ img {
     width: 90%;    
     margin-left: auto;       
   }
+
+  .project-view-inner {      
+    margin: auto;
+    display: flex;
+    position: relative;  
+  }
+  .project-view-inner .exit-btn {
+    color: white;
+    text-decoration: none;
+    position: absolute;  
+    /* font-size: 1.2vw; */
+    background-color: transparent;
+    border: 0;
+    padding: 0; 
+    right: 0;
+    margin: 2vw 3vw;
+    cursor: pointer;
+  }
+  /* background blur effect  */
+  .project-view-inner:before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+    background: linear-gradient(135deg, rgb(102, 0, 255), rgba(255, 255, 255, 0));  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: -10;
+  }
+  .content {
+    flex-basis: 90%;  
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .content * {
+    color: white;
+  }
+  .content a {
+    text-decoration: none;
+    padding: 1vw;
+    width: auto;
+    color: black;
+    border-radius: 0.2vw;
+    font-weight: 500;
+    background-color: white;
+    transition: 0.3s;  
+  }
+  .content a:hover {
+    background-color: transparent;  
+  }
+  .content p {  
+    padding-bottom: 1.5vw;
+  }
+  
+  .content .company {
+    flex-basis: 50%;
+    border-bottom: 1px solid white;
+  }
+  .content .company h1 {
+    font-size: 3vw;
+    margin-top: 2vw;
+    margin-bottom: 0;
+  }
+  .content .company p {    
+    margin-top: 1vw;   
+    font-size: 2vw; 
+  }
+  .development ul div img {
+    width: 3vw;
+    height: 3vw;  
+    margin-right: 2vw;  
+  }
+  .development ul div span {
+    font-size: 2vw;
+  }    
+  .development > div a {
+    margin-left: auto;
+    margin-top: auto;    
+    font-size: 2vw;
+  }
+
 }
 
 @media only screen and (max-width: 650px) {
@@ -518,7 +770,7 @@ img {
   }
 
   .about {
-    margin-bottom: 35vw;
+    margin-bottom: 20vw;
   }  
   .about .title span {
     font-size: 3vw;
@@ -558,6 +810,10 @@ img {
   .footer a {
     width: 5vw;
   }
+
+  .project .project-content h2 {
+    font-size: 3vw;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -567,7 +823,7 @@ img {
   }
   .content-inner h4:last-of-type {
     margin-top: 0;
-    margin-bottom: 12vw;    
+    /* margin-bottom: 12vw;     */
   }
   .projects .project h3 {    
     font-size: 4vw;
@@ -584,6 +840,9 @@ img {
     right: 0;
     left: 0;
     margin: auto;
+  }
+  .header .content {
+    margin-top: 9vw;
   }
   .header .content > div > span:first-of-type {
     font-size: 7vw;
@@ -640,13 +899,14 @@ img {
   }
   .projects .projects-inner {
     width: 95%;
+    gap: 8vw;
   }
   .projects .title span {
     font-size: 5vw;
   }
 
   .about {
-    margin-bottom: 110vw;
+    margin-bottom: 70vw;
   }  
   .about .title span {
     font-size: 5vw;
@@ -691,6 +951,58 @@ img {
   .footer a {
     width: 8vw;
   }
+
+  .project-view-inner {
+    width: 100%;  
+  }
+  .project-view-inner:before {              
+    border-radius: 0;    
+  }
+  .content {
+    flex-basis: 90%;  
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }        
+  .content .company {
+    flex-basis: auto;
+  }
+  .content .company h1 {
+    font-size: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 0;
+  }
+  .content .company p {    
+    margin-top: 1vw;   
+    font-size: 3vw; 
+  }
+  .content .development {
+    flex-basis: 100%;
+  }  
+  .development ul div img {
+    width: 5vw;
+    height: 5vw;  
+    margin-right: 3vw;  
+  }
+  .development ul div span {
+    font-size: 3vw;
+  }    
+  .development > div {
+    flex-direction: column;
+  }
+  .development > div img {
+    width: 100%;
+  }
+  .development > div a {
+    margin: auto;
+    width: 25%;        
+    font-size: 3vw;
+    text-align: center;           
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+  }
 }
 
 @media only screen and (max-width: 300px) {
@@ -700,4 +1012,7 @@ img {
   .content-inner .links a {
     font-size: 2.5vw;
   }
+  .about {
+    margin-bottom: 80vw;
+  }  
 }

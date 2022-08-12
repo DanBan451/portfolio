@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Optimal Exterior",
+        "description": "Trace and Jessica Frankum are a husband and wife teamed up in Cypress, TX. Under their leadership, Optimal Exterior has grown beyond the boundaries of The Greater Houston Area. They started this company at the beginning of 2020 (cduring the Covid-19 pandemic). Despite the tough task at hand, Optimal Exterior has quickly established itself as a premium based service company.",
+        "perks": ["React JS App Development", "Responsive App/ Mobile Friendly/ Animation", "Collaborated with a UX designer & implemented beautiful designs"],  
+        "url": "optimalexterior.com"
+    },
+    {
+        "title": "Tetris",
+        "description": "Fresh out of Unity Game Development and Windows Presentation Foundation (WPF), I moved onto Vanilla Javascript and built a Tetris Clone. Throughout the process, I learned how to use visual studio code and CSS animations in making the game look more beautiful. ",
+        "perks": ["Vanilla Javascript", "Responsive App", "Integrated loops and timers"],  
+        "url": "https://github.com/DanBan451/BlockBuilderGame"
+    },
+    {
+        "title": "Asteroids",
+        "description": "Having just moved from Unity to Windows Presentation Foundation, I learned how to work with a Graphic User Interface (GUI) such as XAML and also how to connect it to my actual code. The language that I used was C#. Because Javascript is very similar to C#, I was able to pick it up very easy as I moved on to Web Development.",
+        "perks": ["Windows Presentation Foundation (WPF)", "Dealt with Big-O and memory leaks", "Integrated loops and timers"],         
+        "url": "https://github.com/DanBan451/Asteroids"
+    },
+    {
+        "title": "Vidly",
+        "description": "Coding with Mosh tutorial had me build a move database application. Through the tutorial, I learned how components work and interact with each other; what object destructuring is and how to pass information from a parent level component to a child level component. I learned about the best practices and why the 'this' keyword sometimes may not work.",
+        "perks": ["React JS Components", "Beautiful symmetrical practices within code", "Sorting & Pagination"],         
+        "url": "https://github.com/DanBan451/vidly"
+    }
+]

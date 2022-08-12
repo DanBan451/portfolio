@@ -17,10 +17,10 @@ function NavBar ({ quoteHandler }) {
     <div id='home' className={"navbar-wrapper"}>
       <div></div>
       <ul className={'links-list'}>
-        <li><a href="http://danban451.github.io/portfolio/#home">Home</a></li>
-        <li><a href="http://danban451.github.io/portfolio/#projects">Projects</a></li>
-        <li><a href="http://danban451.github.io/portfolio/#about">About</a></li>
-        <li><a href="http://danban451.github.io/portfolio/#contact">Contact</a></li>
+        <li><a href="/portfolio/#home">Home</a></li>
+        <li><a href="/portfolio/#projects">Projects</a></li>
+        <li><a href="/portfolio/#about">About</a></li>
+        <li><a href="/portfolio/#contact">Contact</a></li>
         <li><a href="http://danban451.github.io/portfolio/resume.pdf">Resume</a></li>
       </ul>
       <div className='socials-list'>
@@ -31,7 +31,7 @@ function NavBar ({ quoteHandler }) {
           <a href="https://www.facebook.com/profile.php?id=100072146749775">
             <img src={facebook_icon} alt="" />   
           </a>
-          <a href="https://www.instagram.com/optimalexterior/?hl=en">
+          <a href="https://www.linkedin.com/in/daniel-dobrovolskiy-a37721172/">
             <img src={linkedin_icon} alt="" />   
           </a>
         </ul>      

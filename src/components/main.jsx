@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import NavBar from "./navbar";
 import { default as portfolio_image } from "../images/portfolio_image.jpg";
 import { default as portfolio_image_2 } from "../images/portfolio_image_2.jpeg";
@@ -15,18 +16,36 @@ import { default as optimal_exterior_gif } from "../images/optimal-exterior.gif"
 import { default as tetris_gif } from "../images/tetris.gif";
 import { default as asteroids_gif } from "../images/asteroids.gif";
 import { default as moviedatabase_gif } from "../images/moviedatabase.gif";
-
 import { default as phone_icon } from "../images/phone.svg";
 import { default as email_icon } from "../images/email.svg";
 import { default as facebook_icon } from "../images/facebook.svg";
 import { default as instagram_icon } from "../images/instagram-icon.png";
 import { default as linkedin_icon } from "../images/linkedin.svg";
-
 import { default as scroll_up_icon } from "../images/scroll-up.png";
 
+import ProjectView from "./projectview";
+
 export default function Main() {
+  const [showQuote, setShowQuote] = useState(false);
+  const [project, setProject] = useState(0);
+
+  const handleProjecteOpen = (num) => {
+    console.log("quote open");
+    setProject(num);
+    setShowQuote(true);    
+  };
+  const handleProjectExit = () => {
+    console.log("quote close");
+    setShowQuote(false);
+  };
+
+  const handleProjectHover = ({ target }) => {
+    target.classlist.add("project-hover");
+  };
+
   return (
     <React.Fragment>
+      <ProjectView showProject={showQuote} project={project} handler={handleProjectExit} />
       <NavBar />
       <div className="header">
         <img src={portfolio_image} alt="" />
@@ -39,8 +58,13 @@ export default function Main() {
             <h4>Developer</h4>
             <h4>Javascript & React</h4>
             <div className="links">
-              <a href="http://danban451.github.io/portfolio/resume.pdf" download>Download Resume</a>
-              <a href="http://danban451.github.io/portfolio/#contact">Contact Me</a>
+              <a
+                href="http://danban451.github.io/portfolio/resume.pdf"
+                download
+              >
+                Download Resume
+              </a>
+              <a href="/portfolio/#contact">Contact Me</a>
             </div>
           </div>
         </div>
@@ -106,30 +130,58 @@ export default function Main() {
         <div className="title">
           <span>Projects</span>
         </div>
-        <div className='projects-inner'>
-          <div className="project">
-            <h3>Optimal Exterior</h3>
+        <div className="projects-inner">
+          <div className="project" onMouseOver={(e) => handleProjectHover(e)}>
             <img src={optimal_exterior_gif} alt="" />
-            {/* <h3>Optimal Exterior</h3>
-            <span>Collaborated with a designer in rebuilding a website for a local business.</span> */}
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                handleProjecteOpen(0);
+              }}
+              className="project-content"
+            >
+              <h2>Optimal Exterior</h2>
+            </a>
           </div>
-          <div className="project">
-          <h3>Tetris</h3>
+          <div className="project" onMouseOver={(e) => handleProjectHover(e)}>
             <img src={tetris_gif} alt="" />
-            {/* <h3>Tetris</h3>
-            <span>Rebuilt a classic arcade game from scratch using vanilla javascript. </span> */}
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                handleProjecteOpen(1);
+              }}
+              className="project-content"
+            >
+              <h2>Tetris</h2>
+            </a>
+          </div>
+          <div className="project" onMouseOver={(e) => handleProjectHover(e)}>
+            <img src={asteroids_gif} alt="" />
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                handleProjecteOpen(2);
+              }}
+              className="project-content"
+            >
+              <h2>Asteroids</h2>
+            </a>
           </div>
           <div className="project">
-            {/* <h3>Asteroids</h3>
-            <span>Rebuilt a classic arcade game from scratch using c# and xaml</span> */}
-            <h3>Asteroids</h3>
-            <img src={asteroids_gif} alt="" />
-          </div>
-          <div className="project private">
-            {/* <h3>Movie Database</h3>
-            <span>Built a dummy movie database using react and components</span> */}
-            <h3>Movie Database</h3>
             <img src={moviedatabase_gif} alt="" />
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                handleProjecteOpen(3);
+              }}
+              className="project-content"
+            >
+              <h2>Movie Database</h2>
+            </a>
           </div>
         </div>
       </div>
@@ -142,7 +194,22 @@ export default function Main() {
           <div>
             <h1>About Me </h1>
             <p>
-            Being very passionate about my work, I value education and knowledge above all else. The training of the mind to think, as Einstein best said, is the lifelong journey that I have embarked upon. In all aspects of my life, I find ways to make things meaningful and fun. The worst thing I could possibly imagine is to live life being passive and inactive — letting that clock tick as your numbers on this planet slowly run out. I am a person who wants to know the truth and uncover the secrets of the universe; a person who wants to peek into the clock-work of reality and walk in goodness and discipline. The very core of my beliefs lie in pursuing excellence above all else — in fighting weakness and building character. I truly believe that every single person has potential to become great if only they put in the work and time. I am not a believer in being a jack-of-all-trades — a person who is good at many things. I hold that mastery (becoming the 1% in what you do) is far more rewarding and meaningful. 
+              Being very passionate about my work, I value education and
+              knowledge above all else. The training of the mind to think, as
+              Einstein best said, is the lifelong journey that I have embarked
+              upon. In all aspects of my life, I find ways to make things
+              meaningful and fun. The worst thing I could possibly imagine is to
+              live life being passive and inactive — letting that clock tick as
+              your numbers on this planet slowly run out. I am a person who
+              wants to know the truth and uncover the secrets of the universe; a
+              person who wants to peek into the clock-work of reality and walk
+              in goodness and discipline. The very core of my beliefs lie in
+              pursuing excellence above all else — in fighting weakness and
+              building character. I truly believe that every single person has
+              potential to become great if only they put in the work and time. I
+              am not a believer in being a jack-of-all-trades — a person who is
+              good at many things. I hold that mastery (becoming the 1% in what
+              you do) is far more rewarding and meaningful.
             </p>
           </div>
         </div>
@@ -162,7 +229,7 @@ export default function Main() {
           <img src={email_icon} alt="" />
           <span>Danieldob200@gmail.com</span>
         </div>
-        <span>Follow me</span>        
+        <span>Follow me</span>
         <ul className="socials">
           <a href="https://www.facebook.com/profile.php?id=100072146749775">
             <img src={facebook_icon} alt="" />
@@ -176,7 +243,7 @@ export default function Main() {
         </ul>
       </div>
       <div className="footer">
-        <a href="http://danban451.github.io/portfolio/#home">
+        <a href="/portfolio/#home">
           <img src={scroll_up_icon} alt="" />
         </a>
         <span>Copyright @ 2022. All Rights Reserved.</span>
