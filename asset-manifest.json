@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.30e087ba.css",
-    "main.js": "/portfolio/static/js/main.89544ac0.js",
+    "main.js": "/portfolio/static/js/main.8052fd62.js",
     "static/js/787.128fc6e9.chunk.js": "/portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/visualizer.gif": "/portfolio/static/media/visualizer.8bdc342a5f1c0bf8cbd1.gif",
     "static/media/optimal-exterior.gif": "/portfolio/static/media/optimal-exterior.a429a18c85832ea0ec65.gif",
     "static/media/portfolio_image.jpg": "/portfolio/static/media/portfolio_image.57eebdd5b2e629693baa.jpg",
     "static/media/asteroids.gif": "/portfolio/static/media/asteroids.c027ebd03093c7c3d22d.gif",
-    "static/media/moviedatabase.gif": "/portfolio/static/media/moviedatabase.d15d1af8565b3fd93b4c.gif",
     "static/media/portfolio_image_2.jpeg": "/portfolio/static/media/portfolio_image_2.75aa48d4c0a8c2647128.jpeg",
     "static/media/tetris.gif": "/portfolio/static/media/tetris.7f8a0e8bead0567f0f7a.gif",
     "static/media/OptimalPandaWordPress_PandaWordLogo.svg": "/portfolio/static/media/OptimalPandaWordPress_PandaWordLogo.0363af43b0a6c17f1ce6ae547d76b8d7.svg",
@@ -18,11 +18,11 @@
     "static/media/check-icon.svg": "/portfolio/static/media/check-icon.730c5d562005201a4ecef7c6aaf8a839.svg",
     "static/media/facebook.svg": "/portfolio/static/media/facebook.5304bc78593e414ea058c9688891f924.svg",
     "main.30e087ba.css.map": "/portfolio/static/css/main.30e087ba.css.map",
-    "main.89544ac0.js.map": "/portfolio/static/js/main.89544ac0.js.map",
+    "main.8052fd62.js.map": "/portfolio/static/js/main.8052fd62.js.map",
     "787.128fc6e9.chunk.js.map": "/portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30e087ba.css",
-    "static/js/main.89544ac0.js"
+    "static/js/main.8052fd62.js"
   ]
 }
