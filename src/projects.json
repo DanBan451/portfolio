@@ -18,9 +18,9 @@
         "url": "https://github.com/DanBan451/Asteroids"
     },
     {
-        "title": "Vidly",
-        "description": "Coding with Mosh tutorial had me build a move database application. Through the tutorial, I learned how components work and interact with each other; what object destructuring is and how to pass information from a parent level component to a child level component. I learned about the best practices and why the 'this' keyword sometimes may not work.",
-        "perks": ["React JS Components", "Beautiful symmetrical practices within code", "Sorting & Pagination"],         
-        "url": "https://github.com/DanBan451/vidly"
+        "title": "Dijkstra Visualizer",
+        "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstras algorithm works through a visual conext. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fasted route.",
+        "perks": ["React JS Components", "React Hooks", "CSS"],         
+        "url": "https://danban451.github.io/DijkstraVisualizer/"
     }
 ]
