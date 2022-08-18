@@ -15,7 +15,7 @@ import { default as xcode_icon } from "../images/xcode-icon.png";
 import { default as optimal_exterior_gif } from "../images/optimal-exterior.gif";
 import { default as tetris_gif } from "../images/tetris.gif";
 import { default as asteroids_gif } from "../images/asteroids.gif";
-import { default as moviedatabase_gif } from "../images/moviedatabase.gif";
+import { default as visualizer_gif } from "../images/visualizer.gif";
 import { default as phone_icon } from "../images/phone.svg";
 import { default as email_icon } from "../images/email.svg";
 import { default as facebook_icon } from "../images/facebook.svg";
@@ -171,7 +171,7 @@ export default function Main() {
             </a>
           </div>
           <div className="project">
-            <img src={moviedatabase_gif} alt="" />
+            <img src={visualizer_gif} alt="" />
             <a
               href=""
               onClick={(e) => {

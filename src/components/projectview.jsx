@@ -3,11 +3,11 @@ import { default as check_icon } from "../images/check-icon.svg";
 import { default as optimal_exterior_gif } from "../images/optimal-exterior.gif";
 import { default as tetris_gif } from "../images/tetris.gif";
 import { default as asteroids_gif } from "../images/asteroids.gif";
-import { default as moviedatabase_gif } from "../images/moviedatabase.gif";
+import { default as visualizer_gif } from "../images/visualizer.gif";
 import json from "../projects.json";
 
 export default function ProjectView({ showProject, handler, project }) {
-  let images = [optimal_exterior_gif, tetris_gif, asteroids_gif, moviedatabase_gif];
+  let images = [optimal_exterior_gif, tetris_gif, asteroids_gif, visualizer_gif];
   let data = json[project];
   return (
     <div
