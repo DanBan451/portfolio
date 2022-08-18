@@ -180,7 +180,7 @@ export default function Main() {
               }}
               className="project-content"
             >
-              <h2>Movie Database</h2>
+              <h2>DijkstraVisualizer</h2>
             </a>
           </div>
         </div>
