@@ -1,13 +1,13 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import logo from './logo.svg';
 import './App.css';
-import Main from './components/main';
 import { BrowserRouter, Router, Routes } from 'react-router-dom';
+import Main from './components/main';
+import Test from './components/test';
 
 function App() {
   return (  
-    <BrowserRouter>
-      <Main />
-    </BrowserRouter>
+    <Main />     
   );
 }
 

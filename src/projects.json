@@ -1,26 +1,74 @@
 [
-    {
-        "title": "Optimal Exterior",
-        "description": "Trace and Jessica Frankum are a husband and wife teamed up in Cypress, TX. Under their leadership, Optimal Exterior has grown beyond the boundaries of The Greater Houston Area. They started this company at the beginning of 2020 (cduring the Covid-19 pandemic). Despite the tough task at hand, Optimal Exterior has quickly established itself as a premium based service company.",
-        "perks": ["React JS App Development", "Responsive App/ Mobile Friendly/ Animation", "Collaborated with a UX designer & implemented beautiful designs"],  
-        "url": "https://optimalexterior.com/"
-    },
-    {
-        "title": "Tetris",
-        "description": "Fresh out of Unity Game Development and Windows Presentation Foundation (WPF), I moved onto Vanilla Javascript and built a Tetris Clone. Throughout the process, I learned how to use visual studio code and CSS animations in making the game look more beautiful. ",
-        "perks": ["Vanilla Javascript", "Responsive App", "Integrated loops and timers"],  
-        "url": "https://github.com/DanBan451/BlockBuilderGame"
-    },
-    {
-        "title": "Asteroids",
-        "description": "Having just moved from Unity to Windows Presentation Foundation, I learned how to work with a Graphic User Interface (GUI) such as XAML and also how to connect it to my actual code. The language that I used was C#. Because Javascript is very similar to C#, I was able to pick it up very easy as I moved on to Web Development.",
-        "perks": ["Windows Presentation Foundation (WPF)", "Dealt with Big-O and memory leaks", "Integrated loops and timers"],         
-        "url": "https://github.com/DanBan451/Asteroids"
-    },
-    {
-        "title": "Dijkstra Visualizer",
-        "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstras algorithm works through a visual conext. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fasted route.",
-        "perks": ["React JS Components", "React Hooks", "CSS"],         
-        "url": "https://danban451.github.io/DijkstraVisualizer/"
-    }
+  {
+    "title": "Fantum",
+    "description": "Fantum is a React Native mobile application I'm currently developing for a client. It's designed to provide a seamless user experience. To ensure secure login, I've integrated validation using joi-browser and authentication through AWS S3 and springboot. For managing user information during registration, I've utilized Redux, a popular state management tool in the React ecosystem. This allows me to validate user data before submitting it through the springboot controller endpoint. Additionally, I've implemented Python to scrape data from various websites, enhancing the application's functionality and data sources.",
+    "perks": [
+      "Fullstack Development",
+      "React Native & Boostrap & Tailwind",
+      "Springboot & AWS S3 & MySQL"
+    ],
+    "url": ""
+  },
+  {
+    "title": "United Homes",
+    "description": "I created a complete website for a leading construction service in Sacramento, CA. Using React, Bootstrap, and Tailwind, I designed a clean and flexible layout that looks great on all devices. To enable users to get in touch easily, I added a contact email feature using Email JS and made sure the form is validated before sending. I also checked browser compatibility using caniuse.com to ensure a smooth experience for all visitors. In addition, I developed the backend using Spring Boot and AWS S3, allowing the client to manage the website content effortlessly through a user-friendly CMS.",
+    "perks": [
+      "Fullstack Developer & CMS Integration",
+      "React & Bootstrap & Tailwind",
+      "Springboot & AWS S3"
+    ],
+    "url": "https://www.unitedhomesgc.com/"
+  },
+  {
+    "title": "RCheban Towing",
+    "description": "I built a website for a top towing service in South Carolina. With React, Bootstrap, and Tailwind, I crafted a sleek and adaptable design that looks fantastic on any device. For user convenience, I included a contact email feature using Email JS and ensured that the form is validated before sending. To guarantee a seamless experience for everyone, I checked browser compatibility using caniuse.com.",
+    "perks": [
+      "Frontend Developer",
+      "React & Bootstrap & Tailwind",
+      "Browser Compatibility"
+    ],
+    "url": "https://www.rchebantowing.com/"
+  },
+  {
+    "title": "SkyCity Trucking",
+    "description": "I developed a website for a popular transportation service in Washington DC. I utilized React, Bootstrap, and Tailwind to build it. I made sure the website works well on different browsers and looks great on different screen sizes. Additionally, I implemented a translation feature using i18next, allowing visitors to access the website in their preferred language. Moreover, I created contact and application services to enable users to easily get in touch with the owner.",
+    "perks": ["Frontend Developer", "React & Bootstrap & Tailwind", "Mutli-language option"],
+    "url": "https://www.skycity.solutions/"
+  },
+  {
+    "title": "Optimal Exterior",
+    "description": "I developed a modern website for a local exterior cleaning service operating in Houston, TX. To enhance its functionality and appearance, I migrated the website to Bluehost and rebuilt it using React. The previous WordPress version had a poor design, which I improved significantly. By leveraging CSS and Bootstrap, I constructed a visually appealing and responsive layout. To showcase customer feedback, I incorporated Google plugins for the review section. Additionally, I implemented an email service, enabling users to easily request a quote by sending an email to the company.",
+    "perks": [
+      "Frontend Developer",
+      "React & Bootstrap",
+      "Collaborated with a UX designer & implemented beautiful design"
+    ],
+    "url": "https://optimalexterior.com/"
+  },
+  {
+    "title": "Tetris",
+    "description": "Fresh out of Unity Game Development and Windows Presentation Foundation (WPF), I moved onto Vanilla Javascript and built a Tetris Clone. Throughout the process, I learned how to use visual studio code and CSS animations in making the game look more beautiful.",
+    "perks": [
+      "Vanilla Javascript",
+      "Responsive App",
+      "Integrated loops and timers"
+    ],
+    "url": "https://github.com/DanBan451/BlockBuilderGame"
+  },
+  {
+    "title": "Asteroids",
+    "description": "Having just moved from Unity to Windows Presentation Foundation, I learned how to work with a Graphic User Interface (GUI) such as XAML and also how to connect it to my actual code. The language that I used was C#. Because Javascript is very similar to C#, I was able to pick it up very easy as I moved on to Web Development.",
+    "perks": [
+      "Windows Presentation Foundation (WPF)",
+      "Dealt with Big-O and memory leaks",
+      "Integrated loops and timers"
+    ],
+    "url": "https://github.com/DanBan451/Asteroids"
+  },
+  {
+    "title": "Dijkstra Visualizer",
+    "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstras algorithm works through a visual conext. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fasted route.",
+    "perks": ["React JS Components", "React Hooks", "CSS"],
+    "url": "https://danban451.github.io/DijkstraVisualizer/"
+  }
 ]
