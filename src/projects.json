@@ -1,6 +1,18 @@
 [
   {
+    "title": "DramaRama",
+    "media": "dramarama",
+    "description": "DramaRama is a full-stack AI product I'm building: a \"thinking gym\" that helps you work through a hard problem with a cast of twelve AI advisors, each modeled on one of the 5 Elements of Effective Thinking. You bring a problem in plain words; The Catalyst interviews you, distills it into a one-sentence problem statement, and hands you to the advisor whose method fits how you're stuck. From there you think on a node-based canvas while the advisor coaches you through a concrete thinking move and reacts to what you write. I built the Next.js dashboard, a FastAPI backend with a hexagonal architecture, Clerk authentication, a Supabase/Postgres data layer with versioned migrations, Claude-powered streaming prompts with per-user token budgets, and a Chrome extension that runs the practice directly on LeetCode.",
+    "perks": [
+      "Full-stack AI product: Next.js, FastAPI, Supabase & Clerk",
+      "LLM prompt design, streaming responses & per-user token budgets",
+      "Chrome extension, multi-tenant authorization & Vercel/Railway deploys"
+    ],
+    "url": "https://dramarama.vercel.app"
+  },
+  {
     "title": "Fantum",
+    "media": "fantum",
     "description": "Fantum is a React Native mobile application I'm currently developing for a client. It's designed to provide a seamless user experience. To ensure secure login, I've integrated validation using joi-browser and authentication through AWS S3 and springboot. For managing user information during registration, I've utilized Redux, a popular state management tool in the React ecosystem. This allows me to validate user data before submitting it through the springboot controller endpoint. Additionally, I've implemented Python to scrape data from various websites, enhancing the application's functionality and data sources.",
     "perks": [
       "Fullstack Development",
@@ -11,32 +23,69 @@
   },
   {
     "title": "United Homes",
+    "media": "unitedhomes",
     "description": "I created a complete website for a leading construction service in Sacramento, CA. Using React, Bootstrap, and Tailwind, I designed a clean and flexible layout that looks great on all devices. To enable users to get in touch easily, I added a contact email feature using Email JS and made sure the form is validated before sending. I also checked browser compatibility using caniuse.com to ensure a smooth experience for all visitors. In addition, I developed the backend using Spring Boot and AWS S3, allowing the client to manage the website content effortlessly through a user-friendly CMS.",
     "perks": [
       "Fullstack Developer & CMS Integration",
       "React & Bootstrap & Tailwind",
       "Springboot & AWS S3"
     ],
-    "url": "https://www.unitedhomesgc.com/"
+    "url": "https://danban451.github.io/live-demos/united-homes/"
   },
   {
     "title": "RCheban Towing",
+    "media": "rcheban",
     "description": "I built a website for a top towing service in South Carolina. With React, Bootstrap, and Tailwind, I crafted a sleek and adaptable design that looks fantastic on any device. For user convenience, I included a contact email feature using Email JS and ensured that the form is validated before sending. To guarantee a seamless experience for everyone, I checked browser compatibility using caniuse.com.",
     "perks": [
       "Frontend Developer",
       "React & Bootstrap & Tailwind",
       "Browser Compatibility"
     ],
-    "url": "https://www.rchebantowing.com/"
+    "url": "https://danban451.github.io/cheban-towing/"
   },
   {
     "title": "SkyCity Trucking",
+    "media": "skycity",
     "description": "I developed a website for a popular transportation service in Washington DC. I utilized React, Bootstrap, and Tailwind to build it. I made sure the website works well on different browsers and looks great on different screen sizes. Additionally, I implemented a translation feature using i18next, allowing visitors to access the website in their preferred language. Moreover, I created contact and application services to enable users to easily get in touch with the owner.",
     "perks": ["Frontend Developer", "React & Bootstrap & Tailwind", "Mutli-language option"],
     "url": "https://www.skycity.solutions/"
   },
   {
+    "title": "V&Y Horizon",
+    "media": "vy-horizon",
+    "description": "I designed and built the marketing site for V&Y Horizon, a drayage and transportation company. It's a Next.js (App Router) site whose content lives in Hygraph, a headless CMS, and is fetched over GraphQL with Apollo, so the client can update headline copy, partner logos and customer reviews without touching code. The site includes a quote-request modal, a careers page with a validated application form protected by reCAPTCHA and delivered through EmailJS, a testimonial carousel, and scroll animations, all responsive across devices.",
+    "perks": [
+      "Next.js App Router, React Bootstrap & Sass",
+      "Headless CMS (Hygraph) content via GraphQL & Apollo",
+      "Quote & careers forms with validation, EmailJS and reCAPTCHA"
+    ],
+    "url": "https://danban451.github.io/vy-horizon-next/"
+  },
+  {
+    "title": "Accellence Craft",
+    "media": "accellence-craft",
+    "description": "Accellence Craft is a website I built for a custom craftsmanship and remodeling contractor. It's built with Next.js and Tailwind CSS, and every piece of content (hero headers, service cards, the project gallery, the step-by-step process page and the quote banner) is modeled in Hygraph and loaded server-side through Apollo Client, so the owner can manage the whole site from a CMS. I focused on a photo-forward design with full-bleed headers, a portfolio grid of finished work, an image slider, and a navbar with a dedicated mobile menu.",
+    "perks": [
+      "Next.js & Tailwind CSS",
+      "Apollo Client + Hygraph CMS content modeling",
+      "Photo-forward responsive design & mobile navigation"
+    ],
+    "url": "https://danban451.github.io/live-demos/accellence-craft/"
+  },
+  {
+    "title": "Evolution Gaming",
+    "media": "evolution-gaming",
+    "description": "I built the website for Evolution Gaming, a custom PC-building shop. It's a Next.js and Tailwind site that presents the shop's offer as a product catalog: four tiered assembly packages and a line of prebuilt PCs, each with a dynamically routed detail page generated from a single specs data file, plus financing information with Afterpay, event listings, the gaming lounge, an FAQ accordion and photo carousels of past builds. The goal was to let customers compare tiers quickly and reach out to order, so the data model, routing and layout were all designed around that comparison flow.",
+    "perks": [
+      "Next.js dynamic routes driven by a specs data model",
+      "Tailwind CSS, responsive carousels & accordions",
+      "Product-catalog UX for build tiers and prebuilt PCs"
+    ],
+    "url": "https://danban451.github.io/live-demos/evolution-gaming/"
+  },
+  {
     "title": "Optimal Exterior",
+    "media": "optimal-exterior",
     "description": "I developed a modern website for a local exterior cleaning service operating in Houston, TX. To enhance its functionality and appearance, I migrated the website to Bluehost and rebuilt it using React. The previous WordPress version had a poor design, which I improved significantly. By leveraging CSS and Bootstrap, I constructed a visually appealing and responsive layout. To showcase customer feedback, I incorporated Google plugins for the review section. Additionally, I implemented an email service, enabling users to easily request a quote by sending an email to the company.",
     "perks": [
       "Frontend Developer",
@@ -47,16 +96,18 @@
   },
   {
     "title": "Tetris",
+    "media": "tetris",
     "description": "Fresh out of Unity Game Development and Windows Presentation Foundation (WPF), I moved onto Vanilla Javascript and built a Tetris Clone. Throughout the process, I learned how to use visual studio code and CSS animations in making the game look more beautiful.",
     "perks": [
       "Vanilla Javascript",
       "Responsive App",
       "Integrated loops and timers"
     ],
-    "url": "https://github.com/DanBan451/BlockBuilderGame"
+    "url": "https://danban451.github.io/BlockBuilderGame/"
   },
   {
     "title": "Asteroids",
+    "media": "asteroids",
     "description": "Having just moved from Unity to Windows Presentation Foundation, I learned how to work with a Graphic User Interface (GUI) such as XAML and also how to connect it to my actual code. The language that I used was C#. Because Javascript is very similar to C#, I was able to pick it up very easy as I moved on to Web Development.",
     "perks": [
       "Windows Presentation Foundation (WPF)",
@@ -67,6 +118,7 @@
   },
   {
     "title": "Dijkstra Visualizer",
+    "media": "visualizer",
     "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstras algorithm works through a visual conext. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fasted route.",
     "perks": ["React JS Components", "React Hooks", "CSS"],
     "url": "https://danban451.github.io/DijkstraVisualizer/"

@@ -28,15 +28,6 @@ import { default as vs_code_icon } from "../images/vs-code.png";
 import { default as github_icon } from "../images/github-icon.png";
 import { default as xcode_icon } from "../images/xcode-icon.png";
 
-import { default as fantum_gif } from "../images/fantum.gif";
-import { default as unitedhomes_gif } from "../images/unitedhomes.gif";
-import { default as rcheban_gif } from "../images/rcheban.gif";
-import { default as skycity_gif } from "../images/skycity.gif";
-import { default as optimal_exterior_gif } from "../images/optimal-exterior.gif";
-import { default as tetris_gif } from "../images/tetris.gif";
-import { default as asteroids_gif } from "../images/asteroids.gif";
-import { default as visualizer_gif } from "../images/visualizer.gif";
-
 import { default as phone_icon } from "../images/phone.svg";
 import { default as email_icon } from "../images/email.svg";
 import { default as facebook_icon } from "../images/facebook.svg";
@@ -45,6 +36,8 @@ import { default as linkedin_icon } from "../images/linkedin.svg";
 import { default as scroll_up_icon } from "../images/scroll-up.png";
 
 import ProjectView from "./projectview";
+import ProjectMedia from "./projectmedia";
+import projects from "../projects.json";
 
 import classes from "../styles/main.module.css";
 
@@ -177,131 +170,25 @@ export default function Main() {
           <span>Projects</span>
         </div>
         <div className={classes["projects-inner"]}>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={fantum_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(0);
-              }}
-              className={classes["project-content"]}
+          {projects.map((item, index) => (
+            <div
+              key={item.media}
+              className={classes.project}
+              onMouseOver={(e) => handleProjectHover(e)}
             >
-              <h2>Fantum</h2>
-            </a>
-          </div>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={unitedhomes_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(1);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>United Homes</h2>
-            </a>
-          </div>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={rcheban_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(2);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>RCheban Towing</h2>
-            </a>
-          </div>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={skycity_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(3);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>SkyCity Trucking</h2>
-            </a>
-          </div>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={optimal_exterior_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(4);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>Optimal Exterior</h2>
-            </a>
-          </div>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={tetris_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(5);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>Tetris</h2>
-            </a>
-          </div>
-          <div
-            className={classes.project}
-            onMouseOver={(e) => handleProjectHover(e)}
-          >
-            <img src={asteroids_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(6);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>Asteroids</h2>
-            </a>
-          </div>
-          <div className={classes.project}>
-            <img src={visualizer_gif} alt="" />
-            <a
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                handleProjecteOpen(7);
-              }}
-              className={classes["project-content"]}
-            >
-              <h2>DijkstraVisualizer</h2>
-            </a>
-          </div>
+              <ProjectMedia media={item.media} alt={item.title} />
+              <a
+                href={`#project-${item.media}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleProjecteOpen(index);
+                }}
+                className={classes["project-content"]}
+              >
+                <h2>{item.title}</h2>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
       <div id="about" className={classes.about}>
