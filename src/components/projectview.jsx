@@ -1,11 +1,11 @@
 import React from "react";
-
-import { default as check_icon } from "../images/check-icon.svg";
 import ProjectMedia from "./projectmedia";
-import json from "../projects.json";
+import { site, projects, mediaUrl } from "../content";
 
 export default function ProjectView({ showProject, handler, project }) {
-  let data = json[project];
+  const data = projects[project];
+  const labels = site.projects;
+  if (!data) return null;
   return (
     <div
       className={`project-view ${
@@ -25,7 +25,7 @@ export default function ProjectView({ showProject, handler, project }) {
             <ul>
               {data.perks.map((perk) => (
                 <div key={perk}>
-                  <img src={check_icon} alt="" />
+                  <img src={mediaUrl(labels.checkIcon)} alt="" />
                   <span>{perk}</span>
                 </div>
               ))}
@@ -35,11 +35,11 @@ export default function ProjectView({ showProject, handler, project }) {
               {showProject && <ProjectMedia media={data.media} alt={data.title} />}
               {data.url ? (
                 <a href={data.url} target="_blank" rel="noreferrer">
-                  Visit Project
+                  {labels.visitLabel}
                 </a>
               ) : (
                 <a href="#project-private" onClick={(e) => e.preventDefault()}>
-                  Private Project
+                  {labels.privateLabel}
                 </a>
               )}
             </div>
