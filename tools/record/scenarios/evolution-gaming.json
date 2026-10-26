@@ -1,0 +1,7 @@
+{"name":"evolution-gaming","url":"https://danban451.github.io/live-demos/evolution-gaming/","initialWait":2500,"steps":[
+ {"action":"scroll","to":"bottom","duration":5500},{"action":"wait","ms":400},
+ {"action":"goto","url":"https://danban451.github.io/live-demos/evolution-gaming/build/"},{"action":"wait","ms":1800},
+ {"action":"scroll","to":800,"duration":2200},{"action":"wait","ms":300},
+ {"action":"goto","url":"https://danban451.github.io/live-demos/evolution-gaming/build/tier3/"},{"action":"wait","ms":2200},
+ {"action":"goto","url":"https://danban451.github.io/live-demos/evolution-gaming/build/prebuild/"},{"action":"wait","ms":1800},
+ {"action":"scroll","to":"bottom","duration":3000},{"action":"wait","ms":600}]}

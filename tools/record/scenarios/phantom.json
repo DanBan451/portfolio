@@ -1,0 +1,3 @@
+{"name":"phantom","url":"https://danban451.github.io/phantom-deploy/","initialWait":3000,"steps":[
+ {"action":"scroll","to":"bottom","duration":8000},{"action":"wait","ms":800},
+ {"action":"scroll","to":0,"duration":2500},{"action":"wait","ms":800}]}

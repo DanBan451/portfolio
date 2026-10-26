@@ -1,0 +1,6 @@
+{"name":"vy-horizon","url":"https://danban451.github.io/vy-horizon-next/","initialWait":3000,"steps":[
+ {"action":"scroll","to":"bottom","duration":7000},{"action":"wait","ms":600},
+ {"action":"goto","url":"https://danban451.github.io/vy-horizon-next/services/"},{"action":"wait","ms":2000},
+ {"action":"scroll","to":"bottom","duration":5000},{"action":"wait","ms":500},
+ {"action":"goto","url":"https://danban451.github.io/vy-horizon-next/careers/"},{"action":"wait","ms":2000},
+ {"action":"scroll","to":1200,"duration":3000},{"action":"wait","ms":800}]}

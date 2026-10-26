@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-recorder",
+  "private": true,
+  "description": "Playwright + ffmpeg tooling that produces the screen recordings in public/media/projects/",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium",
+    "record": "node record.js",
+    "verify": "node verify-portfolio.js"
+  },
+  "dependencies": {
+    "playwright": "^1.64.1"
+  }
+}
