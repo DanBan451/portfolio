@@ -599,7 +599,6 @@ img {
     content: "";
     width: 30%;
     height: 100%;               
-    background-image: url('./images/portfolio_image_2.jpeg');    
     background-position: center;
     background-size: cover;
     display: block;

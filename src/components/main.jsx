@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import NavBar from "./navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -13,9 +12,6 @@ import {
 import { default as me } from "../images/me4.jpeg";
 import { default as me2 } from "../images/me3.jpg";
 
-import { default as portfolio_image } from "../images/portfolio_image.jpg";
-import { default as portfolio_image_2 } from "../images/portfolio_image_2.jpeg";
-
 import { default as redux_icon } from "../images/redux.png";
 import { default as react_native_icon } from "../images/react-native-icon.png";
 
@@ -23,16 +19,10 @@ import { default as spring_icon } from "../images/leaf.png";
 import { default as jules_icon } from "../images/jules.png";
 import { default as scrum_icon } from "../images/scrum.png";
 
-import { default as python_icon } from "../images/python-icon.png";
 import { default as vs_code_icon } from "../images/vs-code.png";
 import { default as github_icon } from "../images/github-icon.png";
 import { default as xcode_icon } from "../images/xcode-icon.png";
 
-import { default as phone_icon } from "../images/phone.svg";
-import { default as email_icon } from "../images/email.svg";
-import { default as facebook_icon } from "../images/facebook.svg";
-import { default as instagram_icon } from "../images/instagram-icon.png";
-import { default as linkedin_icon } from "../images/linkedin.svg";
 import { default as scroll_up_icon } from "../images/scroll-up.png";
 
 import ProjectView from "./projectview";
@@ -227,10 +217,6 @@ export default function Main() {
         <span>
           I'm always open to discuss your project and talk about new things.
         </span>
-        <div className={classes["contact-methods"]}>
-          <FontAwesomeIcon icon={faPhone} />
-          <span>(907) 687-7403</span>
-        </div>
         <div className={classes["contact-methods"]}>
           <FontAwesomeIcon icon={faEnvelope} />
           <span>Danieldob200@gmail.com</span>
