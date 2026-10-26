@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Daniel Dobrovolskiy — portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Source for [danban451.github.io/portfolio](https://danban451.github.io/portfolio/).
+React 18 (Create React App), deployed as a static site to GitHub Pages.
 
-## Available Scripts
+## Editing content
 
-In the project directory, you can run:
+Everything visible on the site comes from two JSON files plus a media folder:
 
-### `npm start`
+| What | Where |
+|---|---|
+| Hero (name, taglines, photo, button labels), nav, skills, programs, about, contact, socials, footer, page title | `src/content/site.json` |
+| Project cards and their popup text | `src/content/projects.json` |
+| Images and screen recordings referenced by those files | `public/media/` |
+| Downloadable resume | `public/resume.pdf` |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Any JSON value that names a file (`photo`, `icon`, `media`, `checkIcon`,
+`scrollUpIcon`) is a path relative to `public/media/`, e.g.
+`"images/me4.jpeg"` or `"projects/dramarama.mp4"`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Adding a project
 
-### `npm test`
+1. Drop the recording into `public/media/projects/` (`.mp4` autoplays muted and
+   loops; `.gif`/`.png`/`.jpg` render as an image). See
+   [`tools/record/`](tools/record/README.md) to produce one.
+2. Add an entry to `src/content/projects.json`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```json
+{
+  "title": "True Reach",
+  "media": "projects/true-reach.mp4",
+  "description": "What it is, who it's for, what you built.",
+  "perks": ["Stack line 1", "Stack line 2", "Stack line 3"],
+  "url": "https://example.com"
+}
+```
 
-### `npm run build`
+Leave `url` empty (`""`) to show "Private Project" instead of a link. Order in
+the file is display order.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Socials and nav icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`socials[].icon` and `nav.links[].icon` are names resolved in
+`src/components/icons.js` (`github`, `linkedin`, `instagram`, `facebook`, `x`,
+`youtube`, `medium`, `dev`, `website`, `email`, `phone`, …). Add a mapping
+there to use a new icon.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Phone number
 
-### `npm run eject`
+`contact.phone` is `null`, which hides the phone row. Set it to a string to show it.
+The pre-deploy check refuses to publish a build containing the personal numbers
+listed in `tools/check-build.js`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+npm start          # http://localhost:3000
+npm test           # smoke test: JSON content renders
+npm run build      # production build in build/
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deploying
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run deploy
+```
 
-## Learn More
+This builds, runs `tools/check-build.js` (fails if the build contains the
+private `reference/` folder, forbidden text such as phone numbers or API keys,
+or JPEGs with EXIF metadata), then pushes `build/` to the `master` branch,
+which GitHub Pages serves. Source lives on `main`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The site is built for the base path in `package.json` → `homepage`. All
+internal links and media URLs resolve against `PUBLIC_URL`, so changing
+`homepage` (for example to a custom domain) is the only change needed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Private material
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`reference/` (resume drafts, cover letters, audit notes) is gitignored and never
+part of a build. Keep anything you don't want public in there.

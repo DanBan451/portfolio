@@ -29,10 +29,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "check-build": "node tools/check-build.js",
+    "predeploy": "npm run build && npm run check-build",
+    "deploy": "gh-pages -b master -d build --nojekyll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
