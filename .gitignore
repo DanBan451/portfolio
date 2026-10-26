@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# private reference material (resume drafts, cover letters, audit notes) — never commit or deploy
+/reference/
+/reference
+
+# local tooling output
+/tools/record/out
+/tools/record/profile-*
+/tools/record/node_modules
+
+# unrelated editor/tool state
+/.expo
