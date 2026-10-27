@@ -2,55 +2,55 @@
   {
     "title": "DramaRama",
     "media": "projects/dramarama.mp4",
-    "description": "DramaRama is a full-stack AI product I'm building: a \"thinking gym\" that helps you work through a hard problem with a cast of twelve AI advisors, each modeled on one of the 5 Elements of Effective Thinking. You bring a problem in plain words; The Catalyst interviews you, distills it into a one-sentence problem statement, and hands you to the advisor whose method fits how you're stuck. From there you think on a node-based canvas while the advisor coaches you through a concrete thinking move and reacts to what you write. I built the Next.js dashboard, a FastAPI backend with a hexagonal architecture, Clerk authentication, a Supabase/Postgres data layer with versioned migrations, Claude-powered streaming prompts with per-user token budgets, and a Chrome extension that runs the practice directly on LeetCode.",
+    "description": "DramaRama is a full-stack AI product I'm building: a \"thinking gym\" that helps you work through a hard problem with a cast of twelve AI advisors, each modeled on one of the 5 Elements of Effective Thinking. You bring a problem in plain words; The Catalyst interviews you, distills it into a one-sentence problem statement, and hands you to the advisor whose method fits how you're stuck. From there you think on a node-based canvas while the advisor coaches you through a concrete thinking move and reacts to what you write. I built the Next.js dashboard, a FastAPI backend with a hexagonal architecture, Clerk authentication, a Supabase/Postgres data layer with versioned migrations, and Claude-powered streaming prompts with per-user token budgets.",
     "perks": [
       "Full-stack AI product: Next.js, FastAPI, Supabase & Clerk",
       "LLM prompt design, streaming responses & per-user token budgets",
-      "Chrome extension, multi-tenant authorization & Vercel/Railway deploys"
+      "Per-user authorization, versioned migrations & Vercel/Railway deploys"
     ],
     "url": "https://dramarama.vercel.app"
   },
   {
     "title": "Fantum",
     "media": "projects/fantum.gif",
-    "description": "Fantum is a React Native mobile application I'm currently developing for a client. It's designed to provide a seamless user experience. To ensure secure login, I've integrated validation using joi-browser and authentication through AWS S3 and springboot. For managing user information during registration, I've utilized Redux, a popular state management tool in the React ecosystem. This allows me to validate user data before submitting it through the springboot controller endpoint. Additionally, I've implemented Python to scrape data from various websites, enhancing the application's functionality and data sources.",
+    "description": "Fantum is a React Native (Expo) mobile app I built for a client in 2023–2024. Firebase handles sign-in, Redux Toolkit holds registration state with joi validation before submission, phone verification runs through Twilio Verify, and styling uses NativeWind (Tailwind for React Native). A Spring Boot backend was scaffolded but the app as built is Firebase-backed.",
     "perks": [
-      "Fullstack Development",
-      "React Native & Boostrap & Tailwind",
-      "Springboot & AWS S3 & MySQL"
+      "React Native (Expo) & Redux Toolkit",
+      "Firebase Auth & Twilio Verify",
+      "NativeWind (Tailwind) styling & joi validation"
     ],
     "url": ""
   },
   {
     "title": "United Homes",
     "media": "projects/unitedhomes.gif",
-    "description": "I created a complete website for a leading construction service in Sacramento, CA. Using React, Bootstrap, and Tailwind, I designed a clean and flexible layout that looks great on all devices. To enable users to get in touch easily, I added a contact email feature using Email JS and made sure the form is validated before sending. I also checked browser compatibility using caniuse.com to ensure a smooth experience for all visitors. In addition, I developed the backend using Spring Boot and AWS S3, allowing the client to manage the website content effortlessly through a user-friendly CMS.",
+    "description": "I built the website for United Homes, a construction company in Sacramento, CA, with React and Bootstrap: a responsive layout, image carousels of completed work, and a contact form validated with joi and react-hook-form that delivers through EmailJS.",
     "perks": [
-      "Fullstack Developer & CMS Integration",
-      "React & Bootstrap & Tailwind",
-      "Springboot & AWS S3"
+      "React & Bootstrap",
+      "Validated contact form via EmailJS",
+      "Responsive layout & carousels"
     ],
     "url": "https://danban451.github.io/live-demos/united-homes/"
   },
   {
     "title": "RCheban Towing",
     "media": "projects/rcheban.gif",
-    "description": "I built a website for a top towing service in South Carolina. With React, Bootstrap, and Tailwind, I crafted a sleek and adaptable design that looks fantastic on any device. For user convenience, I included a contact email feature using Email JS and ensured that the form is validated before sending. To guarantee a seamless experience for everyone, I checked browser compatibility using caniuse.com.",
+    "description": "I built the website for RCheban Towing, a towing service in South Carolina, with React, Bootstrap and SCSS: a responsive layout, a contact form validated with joi that delivers through EmailJS, and smooth-scroll navigation.",
     "perks": [
-      "Frontend Developer",
-      "React & Bootstrap & Tailwind",
-      "Browser Compatibility"
+      "React, Bootstrap & SCSS",
+      "Validated contact form via EmailJS",
+      "Responsive design"
     ],
     "url": "https://danban451.github.io/cheban-towing/"
   },
   {
     "title": "SkyCity Trucking",
     "media": "projects/skycity.gif",
-    "description": "I developed a website for a popular transportation service in Washington DC. I utilized React, Bootstrap, and Tailwind to build it. I made sure the website works well on different browsers and looks great on different screen sizes. Additionally, I implemented a translation feature using i18next, allowing visitors to access the website in their preferred language. Moreover, I created contact and application services to enable users to easily get in touch with the owner.",
+    "description": "I built and still maintain the website for SkyCity Trucking, a transportation company in Washington, DC, using React, Bootstrap and Tailwind. It's translated with i18next so visitors can read it in their preferred language, and it has contact and job-application forms with validation and reCAPTCHA that deliver through EmailJS.",
     "perks": [
-      "Frontend Developer",
-      "React & Bootstrap & Tailwind",
-      "Mutli-language option"
+      "React, Bootstrap & Tailwind",
+      "Multi-language with i18next",
+      "Contact & application forms with reCAPTCHA and EmailJS"
     ],
     "url": "https://www.skycity.solutions/"
   },
@@ -90,13 +90,13 @@
   {
     "title": "Optimal Exterior",
     "media": "projects/optimal-exterior.gif",
-    "description": "I developed a modern website for a local exterior cleaning service operating in Houston, TX. To enhance its functionality and appearance, I migrated the website to Bluehost and rebuilt it using React. The previous WordPress version had a poor design, which I improved significantly. By leveraging CSS and Bootstrap, I constructed a visually appealing and responsive layout. To showcase customer feedback, I incorporated Google plugins for the review section. Additionally, I implemented an email service, enabling users to easily request a quote by sending an email to the company.",
+    "description": "In 2022 I rebuilt the website for Optimal Exterior, an exterior-cleaning company in Houston, TX, in React and Bootstrap, working from a UX designer's layouts: a responsive design, a customer-reviews section, and a quote-request form that emails the company. The company has since moved to a different site; the link here is my build.",
     "perks": [
-      "Frontend Developer",
       "React & Bootstrap",
-      "Collaborated with a UX designer & implemented beautiful design"
+      "Reviews section & quote-request form",
+      "Built from a UX designer's layouts"
     ],
-    "url": "https://optimalexterior.com/"
+    "url": "https://danban451.github.io/optimalexterior/"
   },
   {
     "title": "Tetris",
@@ -123,7 +123,7 @@
   {
     "title": "Dijkstra Visualizer",
     "media": "projects/visualizer.gif",
-    "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstras algorithm works through a visual conext. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fasted route.",
+    "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstra's algorithm works through a visual context. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fastest route.",
     "perks": [
       "React JS Components",
       "React Hooks",
