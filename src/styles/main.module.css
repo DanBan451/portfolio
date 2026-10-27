@@ -121,34 +121,41 @@ img {
 
 .header-content .name,
 .header-content .name-sub {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .header-content .name {
+  grid-column: 1;
   min-width: min-content;
-  margin-left: auto;
+  margin: 0 0 0 auto;
+  padding-right: 1.5vw;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
 .header-content .name-sub {
-  margin-top: auto;
-  color: rgb(93, 0, 255);
+  color: rgb(131, 48, 255);
   font-weight: 700;
 }
 
 .header-content .descWrapper {
+  grid-column: 1;
   width: 149px;
   margin-top: 20px;
   margin-left: auto;
+  padding-right: 1.5vw;
   display: flex;
   flex-direction: column;
 }
 .header-content .descWrapper h4 {
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.25;
 }
 
 
 .header-content .desc {
-  width: max-content;
+  /* Below 630px the taglines wrap inside the wrapper instead of running into the photo. */
+  width: 100%;
   grid-column: 1 / span 2; /* Make the desc container span two columns */
 }
 
@@ -203,6 +210,9 @@ img {
 
   .header-content .descWrapper h4 {
     font-size: 20px;
+  }
+  .header-content .desc {
+    width: max-content;
   }
   .header-content .descWrapper {
     width: 230px;
@@ -317,7 +327,8 @@ img {
   font-size: 1vw;
 }
 .grid-inner .skill span:last-of-type {
-  font-size: 0.6vw;
+  font-size: 0.75vw;
+  line-height: 1.45;
 }
 
 .grid-inner .title.programs-title {
@@ -487,7 +498,7 @@ img {
   display: flex;
   width: 97vw;
   margin-left: 3vw;
-  height: 30vw;
+  min-height: 30vw;
   margin-left: auto;
   margin-top: 5vw;
 }
@@ -1185,5 +1196,108 @@ img {
 @media only screen and (max-width: 300px) {
   .about {
     margin-bottom: 80vw;
+  }
+}
+
+
+/* -------- Icon set (FontAwesome via site.json icon names) --------  */
+.grid-inner .skill .icon {
+  font-size: 2.6vw;
+  width: auto;
+  height: 1em;
+  color: rgb(131, 48, 255);
+}
+.grid-inner .program .icon {
+  font-size: 1.6vw;
+  width: auto;
+  height: 1em;
+  margin: auto 0;
+  color: rgb(131, 48, 255);
+}
+
+/* -------- About text --------  */
+.about-inner > div p {
+  margin: 0 0 0.9em;
+}
+/* .about-inner now grows with its content; the old fixed-height spacer is unnecessary. */
+@media only screen and (max-width: 500px) {
+  .about {
+    margin-bottom: 14vw;
+  }
+}
+
+/* -------- About timeline --------  */
+.timeline {
+  list-style: none;
+  margin: 1.5vw 0 0;
+  padding: 0;
+  border-left: 0.15vw solid rgb(131, 48, 255);
+}
+.timeline li {
+  display: flex;
+  gap: 1vw;
+  padding: 0.25vw 0 0.25vw 1vw;
+  font-size: 0.85vw;
+  line-height: 1.45;
+  color: white;
+}
+.timeline .timeline-year {
+  flex: 0 0 3.2vw;
+  color: rgb(131, 48, 255);
+  font-weight: 600;
+  padding-left: 0;
+}
+.timeline .timeline-text {
+  padding-left: 0;
+}
+.about-inner > div .timeline li * {
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-inner .skill .icon {
+    font-size: 4vw;
+  }
+  .grid-inner .program .icon {
+    font-size: 2.4vw;
+  }
+  .timeline li {
+    font-size: 1.4vw;
+  }
+  .timeline .timeline-year {
+    flex-basis: 5vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .grid-inner .skill .icon {
+    font-size: 5vw;
+  }
+  .grid-inner .program .icon {
+    font-size: 3vw;
+  }
+  .timeline li {
+    font-size: 2vw;
+  }
+  .timeline .timeline-year {
+    flex-basis: 7vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .grid-inner .skill .icon {
+    font-size: 8vw;
+  }
+  .grid-inner .program .icon {
+    font-size: 5vw;
+  }
+  .timeline {
+    border-left-width: 0.5vw;
+  }
+  .timeline li {
+    font-size: 2.8vw;
+    gap: 2vw;
+    padding-left: 2vw;
+  }
+  .timeline .timeline-year {
+    flex-basis: 10vw;
   }
 }

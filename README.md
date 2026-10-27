@@ -38,12 +38,13 @@ Any JSON value that names a file (`photo`, `icon`, `media`, `checkIcon`,
 Leave `url` empty (`""`) to show "Private Project" instead of a link. Order in
 the file is display order.
 
-### Socials and nav icons
+### Icons
 
-`socials[].icon` and `nav.links[].icon` are names resolved in
-`src/components/icons.js` (`github`, `linkedin`, `instagram`, `facebook`, `x`,
-`youtube`, `medium`, `dev`, `website`, `email`, `phone`, …). Add a mapping
-there to use a new icon.
+`icon` values in `site.json` (skills, tools, nav links, socials) are either a
+name resolved in `src/components/icons.js` (`brain`, `agents`, `database`,
+`react`, `aws`, `wand`, `terminal`, `github`, `linkedin`, `email`, …) or a
+file path under `public/media/` (anything containing `/` or an extension).
+Add a mapping in `icons.js` to use a new FontAwesome icon.
 
 ### Phone number
 

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "./navbar";
 import ProjectView from "./projectview";
 import ProjectMedia from "./projectmedia";
-import { iconFor } from "./icons";
+import { iconFor, isImageIcon } from "./icons";
 import {
   site,
   projects,
@@ -15,19 +15,27 @@ import {
 
 import classes from "../styles/main.module.css";
 
-/** Renders the surname with its trailing accent (e.g. "KIY") in the accent style. */
-function HeroName({ firstName, lastName, lastNameAccent }) {
-  const accent =
-    lastNameAccent && lastName.endsWith(lastNameAccent) ? lastNameAccent : "";
-  const base = accent ? lastName.slice(0, -accent.length) : lastName;
+/** First name on one line, surname (accent colour) on the next. */
+function HeroName({ firstName, lastName }) {
   return (
-    <>
-      <span className={classes.name}>
-        {firstName} <br />
-        {base}
-      </span>
-      {accent && <span className={classes["name-sub"]}>{accent}</span>}
-    </>
+    <h1 className={classes.name}>
+      {firstName}
+      <br />
+      <span className={classes["name-sub"]}>{lastName}</span>
+    </h1>
+  );
+}
+
+/** Icon from site.json: a FontAwesome name, or a file under public/media/. */
+function ContentIcon({ icon, className }) {
+  if (isImageIcon(icon)) {
+    return <img src={mediaUrl(icon)} alt="" className={className} />;
+  }
+  return (
+    <FontAwesomeIcon
+      icon={iconFor(icon)}
+      className={`${classes.icon} ${className || ""}`}
+    />
   );
 }
 
@@ -95,7 +103,7 @@ export default function Main() {
           </div>
           {skills.items.map((skill) => (
             <div className={classes.skill} key={skill.name}>
-              <img src={mediaUrl(skill.icon)} alt="" />
+              <ContentIcon icon={skill.icon} />
               <span>{skill.name}</span>
               <span>{skill.blurb}</span>
             </div>
@@ -105,7 +113,7 @@ export default function Main() {
           </div>
           {programs.items.map((program) => (
             <div className={classes.program} key={program.name}>
-              <img src={mediaUrl(program.icon)} alt="" />
+              <ContentIcon icon={program.icon} />
               <span>{program.name}</span>
             </div>
           ))}
@@ -153,6 +161,16 @@ export default function Main() {
             {about.paragraphs.map((text, i) => (
               <p key={i}>{text}</p>
             ))}
+            {about.timeline && about.timeline.length > 0 && (
+              <ol className={classes.timeline} aria-label={about.timelineTitle}>
+                {about.timeline.map((entry) => (
+                  <li key={entry.year}>
+                    <span className={classes["timeline-year"]}>{entry.year}</span>
+                    <span className={classes["timeline-text"]}>{entry.text}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
           </div>
         </div>
       </div>

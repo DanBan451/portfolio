@@ -1,108 +1,182 @@
 {
   "meta": {
-    "title": "Daniel Dobrovolskiy — Portfolio",
-    "description": "Portfolio of Daniel Dobrovolskiy, full-stack and AI engineer."
+    "title": "Daniel Dobrovolskiy — Full-Stack & AI Engineer",
+    "description": "Daniel Dobrovolskiy is a full-stack software engineer in Austin, TX building production AI systems: RAG and semantic search, agentic workflows with LangGraph and FastAPI, and serverless pipelines on AWS. Founder of DramaRama."
   },
-
   "nav": {
     "links": [
-      { "label": "Home", "section": "home", "icon": "home" },
-      { "label": "Projects", "section": "projects", "icon": "projects" },
-      { "label": "About", "section": "about", "icon": "about" },
-      { "label": "Contact", "section": "contact", "icon": "contact" }
+      {
+        "label": "Home",
+        "section": "home",
+        "icon": "home"
+      },
+      {
+        "label": "Projects",
+        "section": "projects",
+        "icon": "projects"
+      },
+      {
+        "label": "About",
+        "section": "about",
+        "icon": "about"
+      },
+      {
+        "label": "Contact",
+        "section": "contact",
+        "icon": "contact"
+      }
     ],
     "resumeLabel": "Resume"
   },
-
   "hero": {
     "firstName": "DANIEL",
     "lastName": "DOBROVOLSKIY",
-    "lastNameAccent": "KIY",
-    "taglines": ["Developer", "Javascript & Java"],
+    "taglines": [
+      "Full-Stack & AI Engineer",
+      "Python · TypeScript · AWS"
+    ],
     "photo": "images/me4.jpeg",
     "resumeFile": "resume.pdf",
     "resumeLabel": "Download Resume",
     "contactLabel": "Contact Me"
   },
-
   "skills": {
     "title": "Skills",
     "items": [
       {
-        "name": "REACT JS",
-        "icon": "images/react-native-icon.png",
-        "blurb": "Traverse the DOM and combine components into masterpieces"
+        "name": "GenAI & Retrieval",
+        "icon": "brain",
+        "blurb": "RAG and semantic search pipelines: embeddings, vector search on OpenSearch, indexing and ranking, LangChain and LangGraph, LLM tool calling, structured outputs, streaming, prompt and context engineering, guardrails and grounding."
       },
       {
-        "name": "REACT NATIVE",
-        "icon": "images/react-native-icon.png",
-        "blurb": "Building apps on multiple platforms"
+        "name": "Agentic Systems",
+        "icon": "agents",
+        "blurb": "Multi-agent orchestration: router and specialist agents, serverless fan-out pipelines, LLM-judged guardrails, per-call traces with replayable sessions, and per-user token budgets."
       },
       {
-        "name": "REDUX",
-        "icon": "images/redux.png",
-        "blurb": "JavaScript library for managing and centralizing application state"
+        "name": "Backend & Data",
+        "icon": "database",
+        "blurb": "Python and FastAPI, Java and Spring Boot, PostgreSQL and SQL, REST and WebSockets. Data ingestion from S3 to Postgres, rules engines, versioned migrations, pytest."
       },
       {
-        "name": "SPRING",
-        "icon": "images/leaf.png",
-        "blurb": "Application framework and inversion of control container for the Java platform"
+        "name": "Frontend",
+        "icon": "react",
+        "blurb": "TypeScript, React and Next.js (App Router), Redux, Tailwind and Bootstrap, headless CMS content via GraphQL (Hygraph), Clerk authentication."
       },
       {
-        "name": "JULES",
-        "icon": "images/jules.png",
-        "blurb": "Automate components related to building, testing, and deploying, facilitating continuous integration and continuous delivery"
+        "name": "Cloud & Security",
+        "icon": "aws",
+        "blurb": "AWS Lambda, S3, EventBridge, DynamoDB, EC2 and SAM infrastructure-as-code; Docker, CI/CD, serverless and microservices. RBAC, tenant isolation, JWT/OAuth, pen-test remediation."
       },
       {
-        "name": "SCRUM & JIRA's",
-        "icon": "images/scrum.png",
-        "blurb": "Proficient in utilizing the Scrum framework for effective project management, with significant experience in its application in software development"
+        "name": "AI-Assisted Engineering",
+        "icon": "wand",
+        "blurb": "Modular agentic coding workflows in Claude Code, Codex and Devin: shared context, templates, and tests written before the code so AI-generated changes meet agreed behavior. Team AI Champion."
       }
     ]
   },
-
   "programs": {
-    "title": "Programs",
+    "title": "Tools",
     "items": [
-      { "name": "Visual Studio Code", "icon": "images/vs-code.png" },
-      { "name": "Github", "icon": "images/github-icon.png" },
-      { "name": "XCode", "icon": "images/xcode-icon.png" }
+      {
+        "name": "Claude Code",
+        "icon": "terminal"
+      },
+      {
+        "name": "Codex",
+        "icon": "code"
+      },
+      {
+        "name": "Devin",
+        "icon": "robot"
+      },
+      {
+        "name": "Cursor",
+        "icon": "cursor"
+      },
+      {
+        "name": "Docker",
+        "icon": "docker"
+      },
+      {
+        "name": "GitHub",
+        "icon": "github"
+      }
     ]
   },
-
   "projects": {
     "title": "Projects",
     "visitLabel": "Visit Project",
     "privateLabel": "Private Project",
     "checkIcon": "images/check-icon.svg"
   },
-
   "about": {
     "title": "About",
     "heading": "About Me",
     "photo": "images/me3.jpg",
     "paragraphs": [
-      "I possess a strong passion for my work, and prioritize the acquisition of education and knowledge above all other endeavors. I embrace the sentiment expressed by Einstein that the cultivation of a sharp and agile mind is an unceasing and enduring journey. In all aspects of my life, I strive to imbue my endeavors with meaning and purpose, eschewing the passive and lackadaisical approach to existence. My pursuits are firmly rooted in a desire to unveil the mysteries of the universe and unravel the intricacies of reality. However, I am equally driven by a deep-seated commitment to building my character and achieving excellence in all that I do. I firmly believe that every individual has the potential for greatness, given sufficient effort and dedication. I hold that the pursuit of mastery, the attainment of the highest level of proficiency in one's chosen field, is the most rewarding and meaningful approach to one's work and life."
+      "I'm a full-stack software engineer in Austin, TX. Since 2025 most of my work has been production AI systems: retrieval over large structured and unstructured datasets, agentic workflows with validation steps and guardrails, and the orchestration around them. Before that I built secure multi-tenant compliance software, moved Spring Boot services to AWS, and shipped websites for small businesses.",
+      "At Baker Tilly I'm lead developer of a compliance platform for Inflation Reduction Act tax-credit programs (Python, PostgreSQL, S3-to-Postgres ingestion, a penalty-calculating rules engine, RBAC and tenant isolation) and the team's AI Champion: I design the test-first, human-in-the-loop AI workflows that take a ticket from requirements to QA, and run Lunch & Learns on new tooling. At Neurohive I built agentic RAG for a global oil and gas company with LangGraph and a serverless multi-agent pipeline on Lambda, EventBridge and OpenSearch.",
+      "The idea I have carried since I was fifteen is an app that can tell where your thinking is stuck and help you get unstuck. I learned to program in order to build it. It is now DramaRama: twelve advisor agents and an orchestrator on FastAPI, Claude and Next.js, with LLM-judged guardrails and replayable session traces, tested in person with users in Austin."
+    ],
+    "timelineTitle": "Timeline",
+    "timeline": [
+      {
+        "year": "2020",
+        "text": "First programs: Python coursework, then C# with .NET and a WPF Asteroids game."
+      },
+      {
+        "year": "2021",
+        "text": "Freelance web work begins: Tetris in vanilla JavaScript, then React, Redux and MobX. First client sites, including a custom WordPress theme."
+      },
+      {
+        "year": "2022",
+        "text": "Optimal Exterior rebuilt in React; SkyCity Trucking started. Contract at JPMorgan Chase: Spring Boot microservices to AWS with Docker and CI/CD, React UIs."
+      },
+      {
+        "year": "2023",
+        "text": "Client sites in React and Next.js with Hygraph headless CMS: RCheban Towing, United Homes, V&Y Horizon, Accellence Craft, Evolution Gaming. Fantum React Native app."
+      },
+      {
+        "year": "2024",
+        "text": "Baker Tilly: lead developer of a multi-tenant compliance platform in Python and PostgreSQL. DramaRama repository started."
+      },
+      {
+        "year": "2025",
+        "text": "Appointed Team AI Champion. Contract AI engineer at Neurohive: agentic RAG with LangGraph, serverless multi-agent pipeline on AWS, semantic search on OpenSearch. DramaRama founded (Whimsy & Rigor LLC)."
+      },
+      {
+        "year": "2026",
+        "text": "DramaRama live and in user testing. Documentation-grounded chatbot and an LLM tracing workbench at Baker Tilly. True Reach, a deduplicated PR-reach calculator (FastAPI, Next.js)."
+      }
     ]
   },
-
   "contact": {
-    "title": "Contact me",
-    "blurb": "I'm always open to discuss your project and talk about new things.",
+    "title": "Contact",
+    "blurb": "Open to AI engineering and full-stack roles. Email or LinkedIn is the fastest way to reach me.",
     "email": "danieldob200@gmail.com",
     "phone": null,
-    "followLabel": "Follow me"
+    "followLabel": "Find me on"
   },
-
   "socials": [
-    { "name": "GitHub", "icon": "github", "url": "https://github.com/DanBan451" },
-    { "name": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/daniel-dobrovolskiy-a37721172/" },
-    { "name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/sapphirebuyer451/" },
-    { "name": "Facebook", "icon": "facebook", "url": "https://www.facebook.com/profile.php?id=100072146749775" }
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/danieldobrovolskiy"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/DanBan451"
+    },
+    {
+      "name": "Email",
+      "icon": "email",
+      "url": "mailto:danieldob200@gmail.com"
+    }
   ],
-
   "footer": {
     "scrollUpIcon": "images/scroll-up.png",
-    "copyright": "Copyright © {year}. All Rights Reserved."
+    "copyright": "© {year} Daniel Dobrovolskiy · Austin, TX"
   }
 }
