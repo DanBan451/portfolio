@@ -1,134 +1,305 @@
 [
   {
+    "id": "dramarama",
+    "group": "ai",
+    "featured": true,
     "title": "DramaRama",
-    "media": "projects/dramarama.mp4",
-    "description": "DramaRama is a full-stack AI product I'm building: a \"thinking gym\" that helps you work through a hard problem with a cast of twelve AI advisors, each modeled on one of the 5 Elements of Effective Thinking. You bring a problem in plain words; The Catalyst interviews you, distills it into a one-sentence problem statement, and hands you to the advisor whose method fits how you're stuck. From there you think on a node-based canvas while the advisor coaches you through a concrete thinking move and reacts to what you write. I built the Next.js dashboard, a FastAPI backend with a hexagonal architecture, Clerk authentication, a Supabase/Postgres data layer with versioned migrations, and Claude-powered streaming prompts with per-user token budgets.",
-    "perks": [
-      "Full-stack AI product: Next.js, FastAPI, Supabase & Clerk",
-      "LLM prompt design, streaming responses & per-user token budgets",
-      "Per-user authorization, versioned migrations & Vercel/Railway deploys"
+    "role": "Founder & AI Engineer, Whimsy & Rigor LLC",
+    "period": "2025 – Present",
+    "status": "Live",
+    "summary": "Multi-agent LLM coaching platform: an intake agent interviews you and routes you to one of twelve advisor agents, which coach you through a stuck problem on a canvas without handing you the answer.",
+    "description": "You bring a real problem in plain words. An intake agent interviews you, reads how you're stuck, and routes you to the one of twelve advisor agents whose way of thinking fits. The advisor runs a short exercise with you on a node-based canvas, reacting to what you write but never supplying the answer. Built on Edward Burger's 5 Elements of Effective Thinking.\n\nThe orchestration is declarative: a spec file defines the models, context sources and node graph, and a runtime executes it. Every node execution and model call becomes a structured trace event (assembled context with token estimates, input, output, decision reasons, usage, latency) that streams live over SSE and is written as JSONL per run, so any session can be replayed. Backstage, a workbench I built on top of that, renders the orchestration as a graph, lists runs, and lets you step through every trace event and edit prompts in place.\n\nGuardrails run in two layers: advisor prompts never supply a question, an answer or a reframe, and a separate LLM judge reviews each turn for engagement with the exercise, never for correctness. Per-user token budgets meter every model call; Clerk JWTs are validated against a cached JWKS with key rotation handled, with a per-endpoint ownership audit. FastAPI backend in a hexagonal layout, 199 pytest tests, 41 versioned Postgres migrations whose names record six product pivots. Next.js and TypeScript front end on Vercel; API on AWS EC2 behind a server-side proxy.\n\nAbout fifty in-person user interviews in Austin, plus feedback from the framework's author, a C-suite PR advisor and a founder coach, drove those pivots.",
+    "highlights": [
+      "Declarative orchestration spec and runtime with per-node tracing, replayable runs and a Backstage workbench to inspect them",
+      "Two-layer guardrails (prompt rules plus an LLM engagement judge), per-user token budgets with metering, Clerk JWKS auth with an ownership audit",
+      "199 tests, 41 migrations recording six pivots driven by about fifty user interviews; built and run by one person"
     ],
+    "tech": [
+      "python",
+      "fastapi",
+      "claude",
+      "nextjs",
+      "typescript",
+      "postgresql",
+      "supabase",
+      "clerk",
+      "aws",
+      "vercel",
+      "tailwind",
+      "pytest"
+    ],
+    "media": "projects/dramarama.mp4",
     "url": "https://dramarama.vercel.app"
   },
   {
-    "title": "Fantum",
-    "media": "projects/fantum.gif",
-    "description": "Fantum is a React Native (Expo) mobile app I built for a client in 2023–2024. Firebase handles sign-in, Redux Toolkit holds registration state with joi validation before submission, phone verification runs through Twilio Verify, and styling uses NativeWind (Tailwind for React Native). A Spring Boot backend was scaffolded but the app as built is Firebase-backed.",
-    "perks": [
-      "React Native (Expo) & Redux Toolkit",
-      "Firebase Auth & Twilio Verify",
-      "NativeWind (Tailwind) styling & joi validation"
+    "id": "skycity",
+    "group": "client",
+    "featured": true,
+    "title": "Sky City Trucking",
+    "role": "Freelance developer: built, deployed, still supports",
+    "period": "Built 2022–23 · client since 2022",
+    "status": "Live · client since 2022",
+    "client": "Trucking and logistics company, Fife, WA",
+    "summary": "Marketing and driver-recruiting site for a trucking and logistics company near the Port of Tacoma, in English, Russian and Ukrainian. Built 2022–2023 from a UX designer's layouts, deployed on AWS, with fixes and paid updates since.",
+    "description": "Sky City is a family-owned trucking and logistics company in Fife, WA: port drayage, intermodal, over-the-road and a warehouse with transloading. The site had to work for two audiences, shippers requesting quotes and drivers applying for work, so it carries both a contact form and a driver application form, each validated with Joi, protected with reCAPTCHA and delivered through EmailJS, and it's fully translated into English, Russian and Ukrainian with i18next, which matters for the drivers it recruits.\n\nI owned the project end to end with the company's VP: took the handoff from the UX designer's desktop, tablet and phone layouts, built the site in React with React Bootstrap and Sass, deployed it on AWS Amplify and set up the domain on Route 53. When the site went down in 2025 I recovered it, turned on auto-renewal and wrote step-by-step AWS instructions so the company could manage its own account. In 2026, four years in, the company's president brought me back for a paid rewrite of the Home, About and Capabilities pages.",
+    "highlights": [
+      "End to end: design handoff, React build, AWS Amplify and Route 53, outage recovery with self-service docs for the client",
+      "Full translations in English, Russian and Ukrainian with i18next; contact and driver-application forms with Joi, reCAPTCHA and EmailJS",
+      "Four years of repeat paid work from the same client, most recently a content rewrite in 2026"
     ],
-    "url": ""
-  },
-  {
-    "title": "United Homes",
-    "media": "projects/unitedhomes.gif",
-    "description": "I built the website for United Homes, a construction company in Sacramento, CA, with React and Bootstrap: a responsive layout, image carousels of completed work, and a contact form validated with joi and react-hook-form that delivers through EmailJS.",
-    "perks": [
-      "React & Bootstrap",
-      "Validated contact form via EmailJS",
-      "Responsive layout & carousels"
+    "tech": [
+      "react",
+      "javascript",
+      "bootstrap",
+      "sass",
+      "i18next",
+      "aws"
     ],
-    "url": "https://danban451.github.io/live-demos/united-homes/"
-  },
-  {
-    "title": "RCheban Towing",
-    "media": "projects/rcheban.gif",
-    "description": "I built the website for RCheban Towing, a towing service in South Carolina, with React, Bootstrap and SCSS: a responsive layout, a contact form validated with joi that delivers through EmailJS, and smooth-scroll navigation.",
-    "perks": [
-      "React, Bootstrap & SCSS",
-      "Validated contact form via EmailJS",
-      "Responsive design"
-    ],
-    "url": "https://danban451.github.io/cheban-towing/"
-  },
-  {
-    "title": "SkyCity Trucking",
     "media": "projects/skycity.gif",
-    "description": "I built and still maintain the website for SkyCity Trucking, a transportation company in Washington, DC, using React, Bootstrap and Tailwind. It's translated with i18next so visitors can read it in their preferred language, and it has contact and job-application forms with validation and reCAPTCHA that deliver through EmailJS.",
-    "perks": [
-      "React, Bootstrap & Tailwind",
-      "Multi-language with i18next",
-      "Contact & application forms with reCAPTCHA and EmailJS"
-    ],
     "url": "https://www.skycity.solutions/"
   },
   {
+    "id": "vy-horizon",
+    "group": "client",
     "title": "V&Y Horizon",
-    "media": "projects/vy-horizon.mp4",
-    "description": "I designed and built the marketing site for V&Y Horizon, a drayage and transportation company. It's a Next.js (App Router) site whose content lives in Hygraph, a headless CMS, and is fetched over GraphQL with Apollo, so the client can update headline copy, partner logos and customer reviews without touching code. The site includes a quote-request modal, a careers page with a validated application form protected by reCAPTCHA and delivered through EmailJS, a testimonial carousel, and scroll animations, all responsive across devices.",
-    "perks": [
-      "Next.js App Router, React Bootstrap & Sass",
-      "Headless CMS (Hygraph) content via GraphQL & Apollo",
-      "Quote & careers forms with validation, EmailJS and reCAPTCHA"
+    "role": "Freelance developer",
+    "period": "2023 – 2024",
+    "status": "Demo",
+    "client": "Trucking carrier, Portland, OR",
+    "summary": "Next.js marketing site for a Portland trucking carrier whose owner edits the content in Hygraph; redeployed in days when the client's domain lapsed in 2024.",
+    "description": "V&Y Horizon is a trucking carrier in Portland, OR: LTL cartage, rail and port drayage, intermodal. The owner wanted the business represented accurately and wanted to change copy without calling a developer, so the content model (headline copy, services, partner logos, customer reviews) lives in Hygraph and is fetched over GraphQL into a Next.js App Router site styled with React Bootstrap and Sass.\n\nI ran the project between the owner and the UX designer: gathered the copy and assets, shared design previews, ran three rounds of corrections, and built the Next.js site in September–October 2023. The contact form validates with Joi, sits behind reCAPTCHA and delivers through EmailJS; the quote modal and careers application form validate with Joi. When the client's domain lapsed in June 2024, I registered it on Route 53 and had the site redeployed within days.",
+    "highlights": [
+      "Client-editable content model in Hygraph, fetched over GraphQL into Next.js",
+      "Ran requirements and three correction rounds directly with a non-technical owner",
+      "Domain lost in June 2024: registered on Route 53 and redeployed within days"
     ],
+    "tech": [
+      "nextjs",
+      "react",
+      "javascript",
+      "graphql",
+      "hygraph",
+      "bootstrap",
+      "sass"
+    ],
+    "media": "projects/vy-horizon.mp4",
     "url": "https://danban451.github.io/vy-horizon-next/"
   },
   {
-    "title": "Accellence Craft",
-    "media": "projects/accellence-craft.mp4",
-    "description": "Accellence Craft is a website I built for a custom craftsmanship and remodeling contractor. It's built with Next.js and Tailwind CSS, and every piece of content (hero headers, service cards, the project gallery, the step-by-step process page and the quote banner) is modeled in Hygraph and loaded server-side through Apollo Client, so the owner can manage the whole site from a CMS. I focused on a photo-forward design with full-bleed headers, a portfolio grid of finished work, an image slider, and a navbar with a dedicated mobile menu.",
-    "perks": [
-      "Next.js & Tailwind CSS",
-      "Apollo Client + Hygraph CMS content modeling",
-      "Photo-forward responsive design & mobile navigation"
+    "id": "fantum",
+    "group": "client",
+    "title": "Fantum",
+    "role": "Lead developer (contract, under a statement of work)",
+    "period": "2021 – 2024",
+    "status": "Discontinued before launch",
+    "client": "Job-board startup, early-stage founder",
+    "summary": "React Native (Expo) job-board app led for a founder under a formal statement of work: Firebase auth with email and phone verification, Redux Toolkit state and the core app screens. The client discontinued the project before launch.",
+    "description": "Led development of a React Native (Expo) job-board app for a founder under a formal statement of work: Firebase auth with email and phone verification (Twilio Verify), Redux Toolkit state, and the core app screens. Prototyped pulling listings from job boards in the 2021 build. The client discontinued the project before launch.\n\nThe work ran from a signed statement of work in December 2021, revised in 2022, with weekly client meetings into 2024. I worked with a UX designer and a second developer, building from the designer's 2022 screens: applicant and recruiter onboarding, a multi-step registration flow with Joi validation, resume upload and the main app screens, styled with NativeWind. It's shown here as a recording only.",
+    "highlights": [
+      "Led the build for a non-technical founder under a statement of work with status reporting and change control",
+      "Firebase auth with email and phone verification through Twilio Verify; Redux Toolkit registration state",
+      "Worked with a UX designer and a second developer over roughly three years of weekly meetings"
     ],
-    "url": "https://danban451.github.io/live-demos/accellence-craft/"
+    "tech": [
+      "react",
+      "expo",
+      "javascript",
+      "firebase",
+      "redux",
+      "twilio",
+      "tailwind"
+    ],
+    "media": "projects/fantum.gif",
+    "url": ""
   },
   {
-    "title": "Evolution Gaming",
-    "media": "projects/evolution-gaming.mp4",
-    "description": "I built the website for Evolution Gaming, a custom PC-building shop. It's a Next.js and Tailwind site that presents the shop's offer as a product catalog: four tiered assembly packages and a line of prebuilt PCs, each with a dynamically routed detail page generated from a single specs data file, plus financing information with Afterpay, event listings, the gaming lounge, an FAQ accordion and photo carousels of past builds. The goal was to let customers compare tiers quickly and reach out to order, so the data model, routing and layout were all designed around that comparison flow.",
-    "perks": [
-      "Next.js dynamic routes driven by a specs data model",
-      "Tailwind CSS, responsive carousels & accordions",
-      "Product-catalog UX for build tiers and prebuilt PCs"
-    ],
-    "url": "https://danban451.github.io/live-demos/evolution-gaming/"
-  },
-  {
+    "id": "optimal-exterior",
+    "group": "client",
     "title": "Optimal Exterior",
-    "media": "projects/optimal-exterior.gif",
-    "description": "In 2022 I rebuilt the website for Optimal Exterior, an exterior-cleaning company in Houston, TX, in React and Bootstrap, working from a UX designer's layouts: a responsive design, a customer-reviews section, and a quote-request form that emails the company. The company has since moved to a different site; the link here is my build.",
-    "perks": [
-      "React & Bootstrap",
-      "Reviews section & quote-request form",
-      "Built from a UX designer's layouts"
+    "role": "Freelance developer",
+    "period": "2021 – 2022",
+    "status": "2022 build",
+    "client": "Exterior-cleaning company, Houston, TX",
+    "summary": "Cleared a Google 'Deceptive Site' blacklisting on the company's WordPress site in about 48 hours, then rebuilt it in React in 2022; the new quote form brought in about nine real quote requests in its first three months.",
+    "description": "Optimal Exterior is a residential exterior-cleaning company in the Houston area. The first site, in 2021, was WordPress with SEO and Search Console set up. In November 2021 Google flagged it as a 'Deceptive Site' and blacklisted it; I ran the malware scan, removed the infected files and requested Google's review, and the site was cleared in about two days.\n\nIn 2022 I rebuilt it from a UX designer's desktop, tablet and phone layouts as a React app: Create React App, React 18, react-router, React Bootstrap and Sass, with a customer reviews section and a Get-a-Quote pop-up that emails the company through EmailJS. The quote form produced about nine real customer requests between August and October 2022. The company has since moved to a different site; the link here is my 2022 build.",
+    "highlights": [
+      "Security incident: blacklisted WordPress site cleaned and cleared with Google in about 48 hours",
+      "React rebuild from a UX designer's layouts; about nine real quote requests in the first three months",
+      "Create React App, React 18, react-router, React Bootstrap, Sass and EmailJS"
     ],
+    "tech": [
+      "react",
+      "javascript",
+      "bootstrap",
+      "sass",
+      "emailjs",
+      "wordpress"
+    ],
+    "media": "projects/optimal-exterior.gif",
     "url": "https://danban451.github.io/optimalexterior/"
   },
   {
-    "title": "Tetris",
-    "media": "projects/tetris.gif",
-    "description": "Fresh out of Unity Game Development and Windows Presentation Foundation (WPF), I moved onto Vanilla Javascript and built a Tetris Clone. Throughout the process, I learned how to use visual studio code and CSS animations in making the game look more beautiful.",
-    "perks": [
-      "Vanilla Javascript",
-      "Responsive App",
-      "Integrated loops and timers"
+    "id": "united-homes",
+    "group": "client",
+    "title": "United Homes",
+    "role": "Freelance developer",
+    "period": "2023",
+    "status": "Demo",
+    "client": "General contractor, Sacramento, CA",
+    "summary": "Project-portfolio site for a general contractor, built from a UX designer's layouts with per-project pages, photo carousels and a contact form.",
+    "description": "United Homes is a general contractor in Sacramento, CA. The site shows finished work project by project and makes it easy to request a quote: per-project routes driven by one projects array, a photo carousel for each, loading states for the image-heavy pages, and a contact form validated with Joi and react-hook-form that delivers through EmailJS.\n\nBuilt in React with React Bootstrap from the UX designer's Adobe XD layouts, with the design finished in May 2023, the site and form live in June, and twenty revision commits in the following week. I also registered the domain on Route 53 and looked after it for about three years.",
+    "highlights": [
+      "Per-project pages and carousels driven by one data array",
+      "Validated contact form delivered through EmailJS",
+      "Designer's layouts to a live site in about a week, then domain and DNS for three years"
     ],
+    "tech": [
+      "react",
+      "javascript",
+      "bootstrap",
+      "emailjs"
+    ],
+    "media": "projects/unitedhomes.gif",
+    "url": "https://danban451.github.io/live-demos/united-homes/"
+  },
+  {
+    "id": "rcheban-towing",
+    "group": "client",
+    "title": "R. Cheban Towing",
+    "role": "Freelance developer, subcontracted by the UX designer",
+    "period": "2023",
+    "status": "Demo",
+    "client": "Towing company, South Carolina",
+    "summary": "Brochure site for a towing company with click-to-call and a contact form, taken from final design to a working site in four days.",
+    "description": "R. Cheban Towing is a towing company in South Carolina. The UX designer brought me in to build her design: a four-page site with click-to-call buttons, a contact form validated with Joi and delivered through EmailJS, and smooth-scroll navigation, built in React with React Bootstrap and Sass. Final design arrived on March 25, 2023; the working site was up on March 29. I registered the domain on Route 53.",
+    "highlights": [
+      "Final design to a working site in four days",
+      "React, React Bootstrap and Sass; Joi-validated contact form through EmailJS",
+      "Built as the UX designer's development partner"
+    ],
+    "tech": [
+      "react",
+      "javascript",
+      "bootstrap",
+      "sass",
+      "emailjs"
+    ],
+    "media": "projects/rcheban.gif",
+    "url": "https://danban451.github.io/cheban-towing/"
+  },
+  {
+    "id": "accellence-craft",
+    "group": "client",
+    "title": "Accellence Craft & Technique",
+    "role": "Freelance developer: design and front-end build",
+    "period": "2023",
+    "status": "Built, not launched",
+    "client": "Remodeling contractor, Anchorage, AK",
+    "summary": "Photo-forward Next.js 14 site for a remodeling contractor with every page modeled in Hygraph and fetched server-side through Apollo. Designed and built in late 2023; the client did not launch it.",
+    "description": "Accellence Craft & Technique is a remodeling contractor in Anchorage, AK. I designed the site page by page and quoted it, then built it: Next.js 14 App Router with React Server Components, server-side GraphQL through Apollo's Next.js support (experimental at the time), and a full Hygraph content model so the owner could manage hero headers, service cards, the project gallery, the process page and the quote banner without touching code.\n\nThe design is photo-forward: full-bleed headers, a portfolio grid, an image slider and a dedicated mobile menu, styled with Tailwind CSS. Built November–December 2023. The owner approved the design, but the site was not launched.",
+    "highlights": [
+      "Next.js 14 with React Server Components and server-side Apollo GraphQL",
+      "Whole-site content model in Hygraph for owner-managed content",
+      "Own page-by-page design and quote; built, not launched"
+    ],
+    "tech": [
+      "nextjs",
+      "react",
+      "javascript",
+      "tailwind",
+      "graphql",
+      "hygraph"
+    ],
+    "media": "projects/accellence-craft.mp4",
+    "url": "https://danban451.github.io/live-demos/accellence-craft/"
+  },
+  {
+    "id": "evolution-gaming",
+    "group": "concepts",
+    "title": "Evolution Gaming & Repair",
+    "role": "Unsolicited proposal and concept build",
+    "period": "2023",
+    "status": "Concept",
+    "client": "Custom gaming-PC and repair shop, Houston, TX (prospect)",
+    "summary": "Proposal for a Houston PC shop: replace their template store with a guided PC configurator. The concept build is the early catalog prototype: tiered builds and prebuilt PCs with dynamically routed detail pages.",
+    "description": "Evolution Gaming & Repair is a custom gaming-PC builder and repair shop in Houston. I approached them cold in October 2023 with a proposal to replace their template store with a site built around a guided configurator: pick your games, budget and resolution and get recommended components, with cleaner financing and checkout pages.\n\nTo show the direction, I built the catalog skeleton in a week: four tiered build packages and a line of prebuilt PCs, each with a dynamically routed detail page generated from a single specs data file, plus financing, events, lounge and FAQ pages. Next.js App Router and Tailwind CSS. The configurator itself was the proposal, not part of the build, and the shop did not take the project. Shown here as a concept.",
+    "highlights": [
+      "Found a business, diagnosed the problem with its store, pitched a recommendation-driven buying experience",
+      "Catalog prototype: Next.js dynamic routes generated from one specs data model",
+      "Proposal and concept only; the guided configurator was not built"
+    ],
+    "tech": [
+      "nextjs",
+      "react",
+      "javascript",
+      "tailwind"
+    ],
+    "media": "projects/evolution-gaming.mp4",
+    "url": "https://danban451.github.io/live-demos/evolution-gaming/"
+  },
+  {
+    "id": "dijkstra-visualizer",
+    "group": "foundations",
+    "title": "Dijkstra Visualizer",
+    "role": "Learning project, from a tutorial",
+    "period": "2022",
+    "status": "Live",
+    "summary": "Interactive visualizer for Dijkstra's shortest path on a grid, built in React from Clément Mihailescu's pathfinding tutorial with my own interface on top.",
+    "description": "A React app that shows how Dijkstra's algorithm finds the shortest path on a grid: draw walls by click-dragging, run it, and watch the visited nodes animate and the path trace back. The algorithm and grid follow Clément Mihailescu's pathfinding-visualizer tutorial; the info bar, icons and layout are mine. React class components and state. Deployed to GitHub Pages in August 2022.",
+    "highlights": [
+      "Step-by-step animation of the search and the final path",
+      "Click-drag wall drawing on the grid",
+      "Built from Clément Mihailescu's tutorial; React class components"
+    ],
+    "tech": [
+      "react",
+      "javascript",
+      "css"
+    ],
+    "media": "projects/visualizer.gif",
+    "url": "https://danban451.github.io/DijkstraVisualizer/"
+  },
+  {
+    "id": "tetris",
+    "group": "foundations",
+    "title": "Tetris",
+    "role": "Learning project",
+    "period": "2021",
+    "status": "Live",
+    "summary": "Tetris clone in vanilla JavaScript: game loop, timers, rotation and collision logic, no framework.",
+    "description": "A Tetris clone in vanilla JavaScript, HTML and CSS from September 2021, before I used any framework: a setInterval game loop with speed by level, arrow-key rotation and collision, line clearing, score, level and high score, and CSS animations. Direct DOM manipulation here is what later made React's component model click.",
+    "highlights": [
+      "Vanilla JavaScript, no framework",
+      "Game loop, timers, rotation and collision logic",
+      "Score, levels, high score and CSS animations"
+    ],
+    "tech": [
+      "javascript",
+      "html",
+      "css"
+    ],
+    "media": "projects/tetris.gif",
     "url": "https://danban451.github.io/BlockBuilderGame/"
   },
   {
+    "id": "asteroids",
+    "group": "foundations",
     "title": "Asteroids",
+    "role": "Learning project",
+    "period": "2022",
+    "status": "Source on GitHub",
+    "summary": "Asteroids clone in C# and WPF: a XAML interface wired to factory and manager classes, with timers driving the loop.",
+    "description": "An Asteroids clone in C# on Windows Presentation Foundation. The XAML interface is wired to the game through factory and manager classes for the player and the comets, with Stopwatch timers driving the loop and explosion timing, lives and score, and a saucer enemy above a score threshold. It's where I first paid attention to object lifetimes and cleanup in a hot loop, removing spent projectiles from the canvas explicitly.",
+    "highlights": [
+      "C# and Windows Presentation Foundation (XAML)",
+      "Factory and manager classes for player and comets",
+      "Timers, frame timing, object lifetimes and cleanup in a hot loop"
+    ],
+    "tech": [
+      "csharp",
+      "dotnet"
+    ],
     "media": "projects/asteroids.gif",
-    "description": "Having just moved from Unity to Windows Presentation Foundation, I learned how to work with a Graphic User Interface (GUI) such as XAML and also how to connect it to my actual code. The language that I used was C#. Because Javascript is very similar to C#, I was able to pick it up very easy as I moved on to Web Development.",
-    "perks": [
-      "Windows Presentation Foundation (WPF)",
-      "Dealt with Big-O and memory leaks",
-      "Integrated loops and timers"
-    ],
     "url": "https://github.com/DanBan451/Asteroids"
-  },
-  {
-    "title": "Dijkstra Visualizer",
-    "media": "projects/visualizer.gif",
-    "description": "Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph. With this project, I created a program that displays and visualizes the algorithm. The purpose of the program is to show how Dijkstra's algorithm works through a visual context. Like all paths, this program allows the user to add barriers to the target position, and then after running the algorithm, visualizes the fastest route.",
-    "perks": [
-      "React JS Components",
-      "React Hooks",
-      "CSS"
-    ],
-    "url": "https://danban451.github.io/DijkstraVisualizer/"
   }
 ]

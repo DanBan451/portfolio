@@ -1,179 +1,224 @@
 {
   "meta": {
     "title": "Daniel Dobrovolskiy — Full-Stack & AI Engineer",
-    "description": "Daniel Dobrovolskiy is a full-stack software engineer in Austin, TX building production AI systems: RAG and semantic search, agentic workflows with LangGraph and FastAPI, and serverless pipelines on AWS. Founder of DramaRama."
+    "description": "Daniel Dobrovolskiy is a full-stack software engineer in Austin, TX who ships production AI systems: RAG and semantic search, agentic workflows with validation controls, and LLM guardrails. Lead developer of Baker Tilly's Domestic Content app, founder of DramaRama, client work since 2021."
   },
   "nav": {
     "links": [
-      {
-        "label": "Home",
-        "section": "home",
-        "icon": "home"
-      },
-      {
-        "label": "Projects",
-        "section": "projects",
-        "icon": "projects"
-      },
-      {
-        "label": "About",
-        "section": "about",
-        "icon": "about"
-      },
-      {
-        "label": "Contact",
-        "section": "contact",
-        "icon": "contact"
-      }
+      { "label": "Work", "section": "work", "icon": "projects" },
+      { "label": "Experience", "section": "experience", "icon": "briefcase" },
+      { "label": "About", "section": "about", "icon": "about" },
+      { "label": "Contact", "section": "contact", "icon": "contact" }
     ],
     "resumeLabel": "Resume"
   },
   "hero": {
-    "firstName": "DANIEL",
-    "lastName": "DOBROVOLSKIY",
+    "firstName": "Daniel",
+    "lastName": "Dobrovolskiy",
+    "availability": "Austin, TX · Open to AI engineering and forward-deployed roles",
+    "headline": "Full-Stack & AI Engineer",
     "taglines": [
-      "Full-Stack & AI Engineer",
-      "Python · TypeScript · AWS"
+      "I ship production AI systems and the products around them.",
+      "Lead developer of Baker Tilly's Domestic Content app · Founder of DramaRama · Client work since 2021"
+    ],
+    "intro": "Shipping production code since 2021. Since 2025: RAG and semantic search pipelines, agentic workflows with validation controls, and LLM guardrails, built alongside the partners, product managers and users who depend on them.",
+    "proof": [
+      { "label": "Lead developer", "detail": "Domestic Content app, Baker Tilly" },
+      { "label": "Agentic RAG", "detail": "for a global oil & gas company, Neurohive" },
+      { "label": "Founder", "detail": "DramaRama, multi-agent LLM platform with tracing and guardrails" },
+      { "label": "Since 2021", "detail": "client sites and apps for small-business owners, shown below" }
     ],
     "photo": "images/me4.jpeg",
     "resumeFile": "resume.pdf",
-    "resumeLabel": "Download Resume",
-    "contactLabel": "Contact Me"
+    "resumeLabel": "Download resume",
+    "contactLabel": "Get in touch",
+    "workLabel": "See the work"
   },
   "skills": {
-    "title": "Skills",
+    "title": "What I build",
     "items": [
       {
-        "name": "GenAI & Retrieval",
+        "name": "Retrieval & RAG",
         "icon": "brain",
-        "blurb": "RAG and semantic search pipelines: embeddings, vector search on OpenSearch, indexing and ranking, LangChain and LangGraph, LLM tool calling, structured outputs, streaming, prompt and context engineering, guardrails and grounding."
+        "blurb": "Embeddings, semantic and vector search on OpenSearch, indexing and ranking, grounding. LangChain and LangGraph."
       },
       {
-        "name": "Agentic Systems",
+        "name": "Agentic systems",
         "icon": "agents",
-        "blurb": "Multi-agent orchestration: router and specialist agents, serverless fan-out pipelines, LLM-judged guardrails, per-call traces with replayable sessions, and per-user token budgets."
+        "blurb": "Routers, specialist agents and orchestrators; tool calling, structured outputs, streaming; LLM-judged guardrails and per-call traces."
       },
       {
-        "name": "Backend & Data",
-        "icon": "database",
-        "blurb": "Python and FastAPI, Java and Spring Boot, PostgreSQL and SQL, REST and WebSockets. Data ingestion from S3 to Postgres, rules engines, versioned migrations, pytest."
+        "name": "Full-stack product",
+        "icon": "layers",
+        "blurb": "Python and FastAPI, Java and Spring Boot, TypeScript, React and Next.js, PostgreSQL, REST and WebSockets."
       },
       {
-        "name": "Frontend",
-        "icon": "react",
-        "blurb": "TypeScript, React and Next.js (App Router), Redux, Tailwind and Bootstrap, headless CMS content via GraphQL (Hygraph), Clerk authentication."
-      },
-      {
-        "name": "Cloud & Security",
+        "name": "Cloud & security",
         "icon": "aws",
-        "blurb": "AWS Lambda, S3, EventBridge, DynamoDB, EC2 and SAM infrastructure-as-code; Docker, CI/CD, serverless and microservices. RBAC, tenant isolation, JWT/OAuth, pen-test remediation."
+        "blurb": "AWS Lambda, S3, EventBridge, DynamoDB and SAM; Docker, CI/CD, serverless. RBAC, tenant isolation, JWT/OAuth, pen-test remediation."
       },
       {
-        "name": "AI-Assisted Engineering",
+        "name": "Stakeholders & users",
+        "icon": "users",
+        "blurb": "Requirements shaped with a firm partner and PM, in-person user interviews, roadmaps prioritized by usage metrics, and clients who manage their own content."
+      },
+      {
+        "name": "AI-assisted engineering",
         "icon": "wand",
-        "blurb": "Modular agentic coding workflows in Claude Code, Codex and Devin: shared context, templates, and tests written before the code so AI-generated changes meet agreed behavior. Team AI Champion."
+        "blurb": "Team AI Champion: test-first agentic coding workflows in Claude Code, Codex and Devin, Lunch & Learns, and tool evaluation with the firm's AI enablement group."
       }
     ]
   },
   "programs": {
     "title": "Tools",
     "items": [
-      {
-        "name": "Claude Code",
-        "icon": "terminal"
-      },
-      {
-        "name": "Codex",
-        "icon": "code"
-      },
-      {
-        "name": "Devin",
-        "icon": "robot"
-      },
-      {
-        "name": "Cursor",
-        "icon": "cursor"
-      },
-      {
-        "name": "Docker",
-        "icon": "docker"
-      },
-      {
-        "name": "GitHub",
-        "icon": "github"
-      }
+      { "name": "Claude Code", "icon": "terminal" },
+      { "name": "Codex", "icon": "code" },
+      { "name": "Devin", "icon": "robot" },
+      { "name": "Cursor", "icon": "cursor" },
+      { "name": "Docker", "icon": "docker" },
+      { "name": "GitHub", "icon": "github" }
     ]
   },
   "projects": {
-    "title": "Projects",
-    "visitLabel": "Visit Project",
-    "privateLabel": "Private Project",
+    "title": "Work",
+    "intro": "One AI product I founded, seven projects built for clients, one concept pitch, and the early projects where I learned the fundamentals. Each card says what shipped and what didn't.",
+    "groups": [
+      {
+        "id": "ai",
+        "title": "AI product",
+        "blurb": "A multi-agent LLM platform I founded and run: orchestration spec and runtime, per-node tracing, guardrails, token budgets, auth, deploy, and the user interviews behind it."
+      },
+      {
+        "id": "client",
+        "title": "Client work",
+        "blurb": "Sites and an app built for small-business owners as a freelance developer, 2021–2024, working from a UX designer's layouts and owning hosting, domains and forms. Sky City was built 2022–23, is live on the client's domain, and still brings me back for paid updates."
+      },
+      {
+        "id": "concepts",
+        "title": "Concepts",
+        "blurb": "Unsolicited proposals with a working prototype, not paid client work."
+      },
+      {
+        "id": "foundations",
+        "title": "Foundations",
+        "blurb": "Learning projects, 2021–2022: game loops, the DOM and a pathfinding algorithm, before and alongside the first client work."
+      }
+    ],
+    "visitLabel": "Open project",
+    "privateLabel": "Recording only",
+    "detailsLabel": "Details",
     "checkIcon": "images/check-icon.svg"
+  },
+  "experience": {
+    "title": "Experience",
+    "intro": "Titles and dates as on my resume.",
+    "entries": [
+      {
+        "period": "Sep 2024 – Present",
+        "title": "Technical Support Consultant (Full-Stack Software Engineer)",
+        "org": "Baker Tilly",
+        "location": "Austin, TX (Remote)",
+        "summary": "Startup-style product team working directly with a firm partner; ships rapid applications prioritized by usage metrics.",
+        "bullets": [
+          "Appointed team AI Champion (2025): teach engineers AI-assisted workflows, run AI Lunch & Learns, and represent the team with the firm's AI enablement group on tool selection.",
+          "Lead developer of the Domestic Content web app: multi-tenant compliance software for Inflation Reduction Act tax-credit programs in Python and PostgreSQL, with S3-to-PostgreSQL ingestion, a penalty-calculating rules engine, Tableau views, tenant isolation, RBAC and pen-test remediation.",
+          "Building a documentation-grounded AI chatbot for portal users' how-to questions, shaped through user interviews and the platform's lead PM; built an internal workbench to edit and trace each chatbot step and compare LLMs.",
+          "Designed a chain of modular AI workflows that take a ticket from requirements to QA: an interview saves business context, a technical pass builds on it, unclear requirements go to the PM or a senior engineer, and tests and mocks are written from team templates before the code."
+        ],
+        "tags": ["Python", "PostgreSQL", "AWS S3", "RAG", "LLM tracing", "RBAC"]
+      },
+      {
+        "period": "2025 – Present",
+        "title": "Founder & AI Engineer",
+        "org": "DramaRama (Whimsy & Rigor LLC, startup)",
+        "location": "Austin, TX",
+        "summary": "Multi-agent LLM coaching platform: an intake agent routes each user to one of twelve advisor agents; declarative orchestration with per-node tracing, two-layer guardrails, token budgets.",
+        "bullets": [
+          "Built the platform end to end on FastAPI, Claude, Next.js, TypeScript, PostgreSQL and AWS: orchestration spec and runtime, per-node trace events streamed over SSE and stored per run, and a Backstage workbench to inspect them.",
+          "Guardrails in two layers (prompt rules plus an LLM engagement judge), per-user token budgets with metering, Clerk JWKS auth with a per-endpoint ownership audit; 199 tests and 41 versioned migrations.",
+          "Validate demand with about fifty in-person user interviews in Austin and feedback from the framework's author, a C-suite PR advisor and a founder coach; six major pivots driven by testing."
+        ],
+        "tags": ["FastAPI", "Claude", "Next.js", "TypeScript", "PostgreSQL", "AWS"],
+        "project": "dramarama"
+      },
+      {
+        "period": "Jul 2025 – Jan 2026",
+        "title": "AI Engineer (Contract)",
+        "org": "Neurohive (AI startup)",
+        "location": "Remote",
+        "summary": "Agentic RAG for a global oil and gas company on a small, fast-moving team.",
+        "bullets": [
+          "Built agentic RAG workflows (LangGraph, LangChain) answering questions over large structured and unstructured datasets.",
+          "With the architect, built a serverless multi-agent pipeline: a router Lambda sizes each question, a context manager fans out specialist Lambdas (dataset, web, quantitative search) to S3, and EventBridge triggers a finalizer that streams the answer over WebSocket.",
+          "Built retrieval with embedding-based semantic search on OpenSearch, dataset-linked tools ranked per question, and token-efficiency techniques; reviewed junior developers' code."
+        ],
+        "tags": ["LangGraph", "LangChain", "OpenSearch", "AWS Lambda", "EventBridge", "WebSockets"]
+      },
+      {
+        "period": "Oct 2022 – Jan 2023",
+        "title": "Software Engineer (Contract via Pinnacle Group)",
+        "org": "JPMorgan Chase & Co.",
+        "location": "Houston, TX",
+        "summary": "Migrated Java/Spring Boot microservices to AWS with Docker and CI/CD; built React UIs with design, product and BA teams.",
+        "bullets": [],
+        "tags": ["Java", "Spring Boot", "AWS", "Docker", "CI/CD", "React"]
+      },
+      {
+        "period": "2021 – 2024",
+        "title": "Freelance Software Developer",
+        "org": "Self-employed",
+        "location": "",
+        "summary": "Built and launched websites and led a mobile app for small-business clients, working from a UX designer's layouts; owned hosting, domains and forms; set up Hygraph CMS so clients could manage their own content.",
+        "bullets": [
+          "Vanilla JavaScript and direct DOM manipulation first, then React with reusable components, Redux and MobX state management, and load-time optimizations; also Angular and MVC patterns.",
+          "Seven client projects are shown under Work. Sky City Trucking, built 2022–23, is live on the client's domain and still brings me in for paid updates."
+        ],
+        "tags": ["React", "Next.js", "Hygraph", "React Native", "Bootstrap", "AWS"]
+      },
+      {
+        "period": "2019 – 2022",
+        "title": "Education",
+        "org": "Raven Homeschool · University of Alaska Fairbanks",
+        "location": "",
+        "summary": "High school diploma, Raven Homeschool (2021). Computer Science coursework, University of Alaska Fairbanks (2021 – 2022, no degree). Before that, coursework in Python, C#/.NET and JavaScript, 2019–2020; first ASP.NET MVC app in March 2020.",
+        "bullets": [],
+        "tags": ["Python", "C#", ".NET", "JavaScript"]
+      }
+    ]
   },
   "about": {
     "title": "About",
-    "heading": "About Me",
+    "heading": "About me",
     "photo": "images/me3.jpg",
     "paragraphs": [
-      "I'm a full-stack software engineer in Austin, TX. Since 2025 most of my work has been production AI systems: retrieval over large structured and unstructured datasets, agentic workflows with validation steps and guardrails, and the orchestration around them. Before that I built secure multi-tenant compliance software, moved Spring Boot services to AWS, and shipped websites for small businesses.",
-      "At Baker Tilly I'm lead developer of a compliance platform for Inflation Reduction Act tax-credit programs (Python, PostgreSQL, S3-to-Postgres ingestion, a penalty-calculating rules engine, RBAC and tenant isolation) and the team's AI Champion: I design the test-first, human-in-the-loop AI workflows that take a ticket from requirements to QA, and run Lunch & Learns on new tooling. At Neurohive I built agentic RAG for a global oil and gas company with LangGraph and a serverless multi-agent pipeline on Lambda, EventBridge and OpenSearch.",
-      "The idea I have carried since I was fifteen is an app that can tell where your thinking is stuck and help you get unstuck. I learned to program in order to build it. It is now DramaRama: twelve advisor agents and an orchestrator on FastAPI, Claude and Next.js, with LLM-judged guardrails and replayable session traces, tested in person with users in Austin."
+      "I'm a full-stack software engineer in Austin, TX. I've shipped production code since 2021, and since 2025 most of it has been production AI: retrieval over large structured and unstructured datasets, agentic workflows with validation controls, and the guardrails and traces that make them safe to put in front of users.",
+      "At Baker Tilly I'm the lead developer of the Domestic Content web app, multi-tenant compliance software for Inflation Reduction Act tax-credit programs, on a startup-style product team that works directly with a firm partner and ships what usage metrics say matters. I'm also the team's appointed AI Champion: I build the documentation-grounded chatbot for portal users and the workbench that traces each of its steps, design the test-first, human-in-the-loop AI workflows that take a ticket from requirements to QA, run Lunch & Learns, and represent the team with the firm's AI enablement group. At Neurohive, an AI startup, I built agentic RAG for a global oil and gas company: LangGraph workflows, a serverless multi-agent pipeline on Lambda and EventBridge, and semantic search on OpenSearch.",
+      "The idea I've carried since I was fifteen is an app that can tell where your thinking is stuck and help you get unstuck. I learned to program to build it: first as a freelancer for small-business owners, then at JPMorgan Chase and Baker Tilly. It's now DramaRama, which I run as Whimsy & Rigor LLC and have tested in person with about fifty users in Austin."
     ],
     "timelineTitle": "Timeline",
     "timeline": [
-      {
-        "year": "2020",
-        "text": "First programs: Python coursework, then C# with .NET and a WPF Asteroids game."
-      },
-      {
-        "year": "2021",
-        "text": "Freelance web work begins: Tetris in vanilla JavaScript, then React, Redux and MobX. First client sites, including a custom WordPress theme."
-      },
-      {
-        "year": "2022",
-        "text": "Optimal Exterior rebuilt in React; SkyCity Trucking started. Contract at JPMorgan Chase: Spring Boot microservices to AWS with Docker and CI/CD, React UIs."
-      },
-      {
-        "year": "2023",
-        "text": "Client sites in React and Next.js with Hygraph headless CMS: RCheban Towing, United Homes, V&Y Horizon, Accellence Craft, Evolution Gaming. Fantum React Native app."
-      },
-      {
-        "year": "2024",
-        "text": "Baker Tilly: lead developer of a multi-tenant compliance platform in Python and PostgreSQL. DramaRama repository started."
-      },
-      {
-        "year": "2025",
-        "text": "Appointed Team AI Champion. Contract AI engineer at Neurohive: agentic RAG with LangGraph, serverless multi-agent pipeline on AWS, semantic search on OpenSearch. DramaRama founded (Whimsy & Rigor LLC)."
-      },
-      {
-        "year": "2026",
-        "text": "DramaRama live and in user testing. Documentation-grounded chatbot and an LLM tracing workbench at Baker Tilly. True Reach, a deduplicated PR-reach calculator (FastAPI, Next.js)."
-      }
+      { "year": "2019–20", "text": "Coursework in Python, C#/.NET and JavaScript. First ASP.NET MVC app, March 2020." },
+      { "year": "2021", "text": "High school diploma, Raven Homeschool; Computer Science coursework at the University of Alaska Fairbanks begins. Tetris in vanilla JavaScript (September). Freelance Software Developer from October: Optimal Exterior's WordPress site, including a blacklisting cleared in 48 hours; statement of work signed for the Fantum mobile app." },
+      { "year": "2022", "text": "University of Alaska Fairbanks coursework through 2022. Optimal Exterior rebuilt in React; Dijkstra visualizer and Asteroids. Sky City design handoff. Software Engineer (Contract) at JPMorgan Chase & Co. from October: Spring Boot microservices to AWS." },
+      { "year": "2023", "text": "Sky City Trucking live on AWS. R. Cheban Towing, United Homes, V&Y Horizon (Hygraph), Fantum rebuild in Expo, Accellence Craft (Next.js 14). Evolution Gaming proposal." },
+      { "year": "2024", "text": "V&Y Horizon domain recovered and redeployed in days. Baker Tilly from September: lead developer of a multi-tenant compliance platform in Python and PostgreSQL." },
+      { "year": "2025", "text": "Appointed Team AI Champion. AI Engineer (Contract) at Neurohive, July 2025 – January 2026: agentic RAG, serverless multi-agent pipeline, OpenSearch. Sky City outage recovered. Founded DramaRama (Whimsy & Rigor LLC)." },
+      { "year": "2026", "text": "DramaRama: orchestration runtime, tracing and Backstage workbench, in user testing. Documentation-grounded chatbot and LLM tracing workbench at Baker Tilly. Sky City content rewrite, four years in." }
     ]
   },
   "contact": {
     "title": "Contact",
-    "blurb": "Open to AI engineering and full-stack roles. Email or LinkedIn is the fastest way to reach me.",
+    "heading": "Let's talk",
+    "blurb": "Open to AI engineering and forward-deployed engineering roles. Email or LinkedIn is the fastest way to reach me.",
     "email": "danieldob200@gmail.com",
     "phone": null,
     "followLabel": "Find me on"
   },
   "socials": [
-    {
-      "name": "LinkedIn",
-      "icon": "linkedin",
-      "url": "https://www.linkedin.com/in/danieldobrovolskiy"
-    },
-    {
-      "name": "GitHub",
-      "icon": "github",
-      "url": "https://github.com/DanBan451"
-    },
-    {
-      "name": "Email",
-      "icon": "email",
-      "url": "mailto:danieldob200@gmail.com"
-    }
+    { "name": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/danieldobrovolskiy" },
+    { "name": "GitHub", "icon": "github", "url": "https://github.com/DanBan451" },
+    { "name": "Email", "icon": "email", "url": "mailto:danieldob200@gmail.com" }
   ],
   "footer": {
     "scrollUpIcon": "images/scroll-up.png",
