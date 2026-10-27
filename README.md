@@ -68,8 +68,10 @@ npm run deploy
 
 This builds, runs `tools/check-build.js` (fails if the build contains the
 private `reference/` folder, forbidden text such as phone numbers or API keys,
-or JPEGs with EXIF metadata), then pushes `build/` to the `master` branch,
-which GitHub Pages serves. Source lives on `main`.
+or JPEGs with EXIF metadata), then pushes `build/` as a single commit to the
+`gh-pages` branch, which GitHub Pages serves. Source lives on `main` (the
+default branch); `gh-pages` holds only build output and can be regenerated at
+any time.
 
 The site is built for the base path in `package.json` → `homepage`. All
 internal links and media URLs resolve against `PUBLIC_URL`, so changing

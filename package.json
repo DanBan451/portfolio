@@ -33,7 +33,7 @@
     "test": "react-scripts test",
     "check-build": "node tools/check-build.js",
     "predeploy": "npm run build && npm run check-build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
